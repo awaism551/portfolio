@@ -1,0 +1,125 @@
+{
+  "defaultSeo": {
+    "title": "Awais Nasir | Senior Software Engineer",
+    "description": "Awais Nasir is a Senior Software Engineer, experienced in creating beautiful and functional websites and web applications.",
+    "url": "https://www.kelvinsanchez15.com/",
+    "previewImage": "https://user-images.githubusercontent.com/4708484/93688063-050a8980-fa91-11ea-89ca-3530a9038393.png"
+  },
+  "heroData": {
+    "greetings": "HELLO, ",
+    "introduction": "I'm Awais Nasir",
+    "role": "Senior Software Engineer",
+    "paragraph": "Passionate about coding, and making my client ideas come true.",
+    "button1": "Check my work",
+    "button2": "Contact me"
+  },
+  "aboutData": {
+    "aboutTitle": "About me",
+    "aboutItems": [
+      "Senior Software Engineer based in Lahore, Pakistan",
+      "extensive Industry experience in developing and leading Web apps, Mobile apps and Server Side Services",
+      "Enthusiastic team player who values clear communication, embraces feedback, and is always eager to learn and grow.",
+      "Industries worked in: Software Services, Product Based Companies, Deep understanding of the entire Software Development process from front-end to back-end development",
+      "Outside of work, I enjoy playing Chess and Cricket, Watching Movies and Reading Books."
+    ],
+    "resumeTitle": "Resumé",
+    "resumeParagraph": "You can check my resumé in the link below.",
+    "resumeButton": "Resumé",
+    "resumeLink": "/resume/resume-en.pdf",
+    "skillsTitle": "Skills"
+  },
+  "portfolioData": {
+    "portfolioTitle": "Portfolio",
+    "projects": [
+      {
+        "name": "Performance Reporting",
+        "projectUrl": "https://portal.afiniti.com/",
+        "imgPath": "projectMedia/pr.png",
+        "imgAlt": "Performance Reporting preview",
+        "summary": "Engineered a user-friendly reporting app that provides stakeholders with clear insights into Afiniti software performance across client environments, using key metrics to improve results",
+        "keyFeatures": [
+          "User-friendly dashboard",
+          "Live preview of each Account/Client/Tenant",
+          "Customizable reports",
+          "Role Based Access Control"
+        ],
+        "technologies": ["React", "NextJS", "Material-UI", "Nestjs", "MySQL"]
+      },
+      {
+        "name": "WFM",
+        "imgPath": "projectMedia/wfm.png",
+        "imgAlt": "WFM preview",
+        "summary": "Workforce Management Software is being used in Contact Centers",
+        "keyFeatures": [
+          "Scheduling of Agents",
+          "TimeOff Requests Modules",
+          "Work Plans and Work Plan Rotations of Agents",
+          "Forecasting",
+          "Various Live and historical reporting",
+          "ETL (export,transpose,load) based Module to load and sync the historical data from Afiniti dbs to Client Environments"
+        ],
+        "technologies": [
+          "React",
+          "NextJS",
+          "PostgreSQL",
+          "NodeJS",
+          "C#",
+          "Vb.net",
+          "Material-UI",
+          "Nestjs",
+          "Typeorm"
+        ]
+      },
+      {
+        "name": "Visenya",
+        "imgPath": "projectMedia/easybank.png",
+        "imgAlt": "Easybank website preview",
+        "summary": "Fully responsive SAAS product landing page designed with Tailwind CSS.",
+        "keyFeatures": [
+          "Pixel perfect design",
+          "Absolute positioning",
+          "Custom classes"
+        ],
+        "technologies": ["Tailwind", "TypeScript", "React", "NextJS"]
+      },
+      {
+        "name": "BombaiMTY",
+        "projectUrl": "https://bombai-mty-menu.vercel.app/",
+        "repoUrl": "https://github.com/kelvinsanchez15/bombai-menu",
+        "imgPath": "projectMedia/bombai-mty.png",
+        "imgAlt": "BombaiMTY website preview",
+        "summary": "Fast food sales portal with WhatsApp checkout.",
+        "keyFeatures": [
+          "Product filter",
+          "Shopping cart",
+          "Cover photo",
+          "Google Sheets integration"
+        ],
+        "technologies": ["Chakra UI", "TypeScript", "React", "NextJS"]
+      }
+    ]
+  },
+  "blogData": {
+    "featuredArticle": "Featured Article",
+    "mostRecent": "Most Recent",
+    "button": "More Articles"
+  },
+  "contactData": {
+    "title": "Contact",
+    "p1": "If you are interested in hiring me for your project please use the form below to get in touch. Want to know how I work and what I can offer? Check out my ",
+    "p2": "portfolio",
+    "p3": " and ",
+    "p4": "resumé",
+    "resumeLink": "/resume/resume-en.pdf",
+    "subtitle": "You can also find me on the following channels",
+    "formTitle": "Get in touch",
+    "firstNameLabel": "First Name",
+    "lastNameLabel": "Last Name",
+    "emailLabel": "Email",
+    "messageLabel": "Message",
+    "placeholder": "Feel free to include any details.",
+    "submitButton": "send",
+    "requiredErrorMessage": "Required",
+    "invalidEmailErrorMessage": "Invalid email format"
+  }
+}
