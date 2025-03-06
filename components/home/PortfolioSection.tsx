@@ -87,7 +87,7 @@ export default function Portfolio({
                   </div>
 
                   {/* Overlay */}
-                  <Box
+                    <Box
                     sx={{
                       position: 'absolute',
                       width: '100%',
@@ -104,7 +104,7 @@ export default function Portfolio({
                     }}
                   >
                     <ButtonGroup variant="contained">
-                      <Button
+                    {project.repoUrl ? <Button
                         aria-label="Link to project GitHub repository"
                         component="a"
                         href={project.repoUrl}
@@ -113,8 +113,8 @@ export default function Portfolio({
                         target="_blank"
                       >
                         Repo
-                      </Button>
-                      <Button
+                      </Button> : null}
+                      {project.projectUrl ? <Button
                         aria-label="Link to project live preview"
                         component="a"
                         href={project.projectUrl}
@@ -123,7 +123,7 @@ export default function Portfolio({
                         target="_blank"
                       >
                         Live
-                      </Button>
+                      </Button> : null}
                     </ButtonGroup>
                   </Box>
                 </Box>
@@ -149,7 +149,8 @@ export default function Portfolio({
                       underline="hover"
                       variant="h5"
                     >
-                      {project.name}
+                      {/* {project.name} */}
+                      Asad
                     </Link>
                     <Typography
                       color="textSecondary"
