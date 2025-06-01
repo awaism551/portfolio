@@ -35,7 +35,7 @@
         "name": "Performance Reporting",
         "projectUrl": "https://portal.afiniti.com/",
         "imgPath": "projectMedia/pr.png",
-        "imgAlt": "Performance Reporting preview",
+        "imgAlt": "Performance Reporting preview",  
         "summary": "Engineered a user-friendly reporting app that provides stakeholders with clear insights into Afiniti software performance across client environments, using key metrics to improve results",
         "keyFeatures": [
           "User-friendly dashboard",
