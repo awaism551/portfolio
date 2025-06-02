@@ -4,7 +4,7 @@ import { GetStaticProps } from 'next';
 import HeroSection from '../components/home/HeroSection';
 import AboutSection from '../components/home/AboutSection';
 import PortfolioSection from '../components/home/PortfolioSection';
-import BlogSection from '../components/home/BlogSection';
+// import BlogSection from '../components/home/BlogSection';
 import ContactSection from '../components/home/ContactSection';
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
@@ -27,7 +27,7 @@ export default function Index({
     heroData,
     aboutData,
     portfolioData,
-    blogData,
+    // blogData,
     contactData,
   } = content;
 
@@ -43,7 +43,7 @@ export default function Index({
           name="keywords"
         />
         <meta content="English" name="language" />
-        <meta content="Kelvin Sanchez" name="author" />
+        <meta content="Awais Nasir" name="author" />
         <link href="/favicon.ico" rel="icon" />
 
         {/* Open Graph */}
@@ -57,7 +57,8 @@ export default function Index({
       <HeroSection heroData={heroData} />
       <AboutSection aboutData={aboutData} />
       <PortfolioSection portfolioData={portfolioData} />
-      <BlogSection blogData={blogData} />
+      {/* <BlogSection blogData={blogData} /> */}
+      {/* No Blogs for now */}
       <ContactSection contactData={contactData} />
     </>
   );

@@ -63,11 +63,11 @@ export default function ElevateAppBar() {
       name: `${router.locale === 'en' ? 'PORTFOLIO' : 'PORTAFOLIO'}`,
       icon: <WorkIcon />,
     },
-    {
+    /* {
       link: '/#blog',
       name: 'BLOG',
       icon: <AssignmentIcon />,
-    },
+    }, */
     {
       link: '/#contact',
       name: `${router.locale === 'en' ? 'CONTACT' : 'CONTACTO'}`,
@@ -87,7 +87,7 @@ export default function ElevateAppBar() {
                 variant="button"
               >
                 <Typography color="primary" variant="h3">
-                  K
+                  AN
                 </Typography>
               </Link>
 

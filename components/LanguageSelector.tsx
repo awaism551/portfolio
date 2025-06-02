@@ -8,7 +8,6 @@ import {
 
 const languages = [
   { code: 'en', text: 'English' },
-  { code: 'es', text: 'Español' },
 ];
 
 export default function LanguageSelector() {

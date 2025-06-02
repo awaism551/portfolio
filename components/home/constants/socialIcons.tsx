@@ -13,7 +13,7 @@ const socialIcons = [
       </svg>
     ),
     label: 'Github',
-    href: 'https://github.com/kelvinsanchez15',
+    href: 'https://github.com/awaism551',
   },
   {
     icon: (
@@ -29,9 +29,9 @@ const socialIcons = [
       </svg>
     ),
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/kelvin-sanchez',
+    href: 'https://www.linkedin.com/in/awais-nasir-dev/',
   },
-  {
+  /* {
     icon: (
       <svg
         height="24px"
@@ -46,7 +46,7 @@ const socialIcons = [
     ),
     label: 'Twitter',
     href: 'https://www.twitter.com/kelvin_sanchez',
-  },
+  }, */
 ];
 
 export default socialIcons;

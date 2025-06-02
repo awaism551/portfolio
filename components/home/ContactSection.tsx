@@ -19,7 +19,7 @@ import {
 import ShortCenteredDivider from '../ui/ShortCenteredDivider';
 import Link from '../Link';
 import EmailSuccessMessage from '../EmailSuccessMessage';
-import profilePicture from '../../public/profile-picture.jpg';
+import profilePicture from '../../public/profile-picture.jpeg';
 
 import socialIcons from './constants/socialIcons';
 
@@ -113,7 +113,7 @@ export default function Contact({
         <Box sx={{ display: 'flex', justifyContent: 'center', my: 2 }}>
           <Avatar sx={{ width: 96, height: 96 }}>
             <Image
-              alt="Kelvin Sánchez"
+              alt="Awais Nasir"
               height={160}
               placeholder="blur"
               src={profilePicture}

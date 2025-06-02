@@ -22,8 +22,8 @@ import getDataUrlWithShimmerEffect from '../../utils/getDataUrlWithShimmerEffect
 
 interface Project {
   name: string;
-  projectUrl: string;
-  repoUrl: string;
+  projectUrl?: string | null;
+  repoUrl?: string | null;
   imgPath: string;
   imgAlt: string;
   summary: string;
@@ -104,26 +104,30 @@ export default function Portfolio({
                     }}
                   >
                     <ButtonGroup variant="contained">
-                      <Button
-                        aria-label="Link to project GitHub repository"
-                        component="a"
-                        href={project.repoUrl}
-                        rel="noopener"
-                        startIcon={<GitHub />}
+                      {project.repoUrl && (
+                        <Button
+                          aria-label="Link to project GitHub repository"
+                          component="a"
+                          href={project.repoUrl}
+                          rel="noopener"
+                          startIcon={<GitHub />}
                         target="_blank"
                       >
                         Repo
                       </Button>
-                      <Button
-                        aria-label="Link to project live preview"
-                        component="a"
-                        href={project.projectUrl}
-                        rel="noopener"
-                        startIcon={<Visibility />}
+                      )}
+                      {project.projectUrl && (
+                        <Button
+                          aria-label="Link to project live preview"
+                          component="a"
+                          href={project.projectUrl}
+                          rel="noopener"
+                          startIcon={<Visibility />}
                         target="_blank"
                       >
                         Live
                       </Button>
+                      )}
                     </ButtonGroup>
                   </Box>
                 </Box>
@@ -142,7 +146,7 @@ export default function Portfolio({
                   <div>
                     <Link
                       gutterBottom
-                      href={project.projectUrl}
+                      href={project.projectUrl ?? ''}
                       rel="noopener"
                       sx={{ display: 'inline-block' }}
                       target="_blank"
