@@ -17,7 +17,7 @@
     "aboutTitle": "About me",
     "aboutItems": [
       "Senior Software Engineer based in Lahore, Pakistan",
-      "extensive Industry experience in developing and leading Web apps, Mobile apps and Server Side Services",
+      "extensive Industry    in developing and leading Web apps, Mobile apps and Server Side Services",
       "Enthusiastic team player who values clear communication, embraces feedback, and is always eager to learn and grow.",
       "Industries worked in: Software Services, Product Based Companies, Deep understanding of the entire Software Development process from front-end to back-end development",
       "Outside of work, I enjoy playing Chess and Cricket, Watching Movies and Reading Books."
@@ -31,6 +31,52 @@
   "portfolioData": {
     "portfolioTitle": "Portfolio",
     "projects": [
+      {
+        "name": "Daleel Aqar",
+        "projectUrl": "https://www.daleelaqar.com/#/nav/home",
+        "imgPath": "projectMedia/daleelaqar.png",
+        "imgAlt": "Daleel Aqar preview",
+        "summary": "Daleel Aqar, a leading real estate enterprise in Jordan, reached out to me via LinkedIn for expert consultation on building their comprehensive real estate platform, enabling users to buy, sell, and rent properties. I provided end-to-end guidance throughout the entire product lifecycle — from initial planning to successful deployment — leveraging a modern tech stack that included Angular, NestJS, GraphQL, PostgreSQL, and AWS, structured within a monorepo architecture using Nx.dev for scalable development.",
+        "keyFeatures": [
+          "Comprehensive Real Estate Platform",
+          "User-friendly Interface",
+          "Scalable Architecture",
+          "Modern Tech Stack",
+          "Monorepo Development"
+        ],
+        "technologies": [
+          "Angular",
+          "NestJS",
+          "GraphQL",
+          "PostgreSQL",
+          "AWS",
+          "Nx.dev"
+        ]
+      },
+      {
+        "name": "Authentic Influencers",
+        "projectUrl": "https://authenticstats.com/",
+        "imgPath": "projectMedia/authentic.jpg",
+        "imgAlt": "Authentic Influencers preview",
+        "summary": "This platform connects Instagram and TikTok influencers with brands for collaboration opportunities. It offers a complete environment where both parties can showcase their pitches, negotiate terms, and finalize business deals seamlessly. The client contacted me via LinkedIn for part-time consultation. I mentored the development team on engineering best practices and successfully led the project through to full deployment on AWS.",
+        "keyFeatures": [
+          "Instagram and TikTok Influencers",
+          "Brands",
+          "Collaboration Opportunities",
+          "Pitches",
+          "Negotiate Terms",
+          "Finalize Business Deals"
+        ],
+        "technologies": [
+          "React",
+          "NextJS",
+          "Ruby on Rails",
+          "AWS",
+          "PostgreSQL",
+          "Docker",
+          "Kubernetes"
+        ]
+      },
       {
         "name": "Performance Reporting",
         "projectUrl": "https://portal.afiniti.com/",
@@ -95,6 +141,71 @@
           "Airflow",
           "Postgres",
           "Docker"
+        ]
+      },
+      {
+        "name": "WFM Historical Connectors",
+        "imgPath": "projectMedia/wfmhistconn.png",
+        "imgAlt": "WFM Historical Connectors preview",
+        "summary": "Architected an ETL application to export, transpose, and load historical data from Afiniti databases into client environments, streamlining data synchronization and integration. Fueled product user adoption rate by customizing the app functionality to meet the unique requirements, configurations, and environments of diverse clients. Ran complex data migration initiatives, leveraging advanced SQL expertise and a deep understanding of database transactions to transfer large datasets while maintaining data integrity.",
+        "keyFeatures": [
+          "ETL (export,transpose,load)",
+          "Data Integration",
+          "Data Migration",
+          "Data Synchronization"
+        ],
+        "technologies": [
+          "C#",
+          "Vb.net",
+          "SQL",
+          "PostgreSQL",
+          "Docker",
+          "MySQL",
+          "Greenplum"
+        ]
+      },
+      {
+        "name": "Db Utility",
+        "imgPath": "projectMedia/dbutility.jpg",
+        "imgAlt": "Db Utility preview",
+        "summary": "Developed a utility service for Afiniti's internal teams which enabled the smooth deployment of database schemas, tables, stored procedures, functions, views, and triggers on both production and staging servers. Managed and safeguarded database server data through robust backup and log tracking functionality, ensuring data protection and preventing system issues.",
+        "keyFeatures": [
+          "Database Deployment",
+          "Database Backup",
+          "Database Logs",
+          "Database Schema Management"
+        ],
+        "technologies": [
+          "Bash Scripting",
+          "SQL",
+          "PostgreSQL",
+          "MySQL",
+          "Greenplum"
+        ]
+      },
+      {
+        "name": "Aduro",
+        "projectUrl": "https://play.google.com/store/apps/details?id=com.nbe.android.adurohybrid1&hl=en",
+        "imgPath": "projectMedia/aduro.png",
+        "imgAlt": "Aduro preview",
+        "summary": "Developed a hybrid app using Ionic1 to interface with hardware controllers which enabled remote management of devices such as DHW systems, hoppers, and boilers:",
+        "keyFeatures": [
+          "Remote Management",
+          "Hardware Controllers",
+          "DHW Systems",
+          "Hoppers",
+          "Boilers",
+          "IOT"
+        ],
+        "technologies": [
+          "Ionic1",
+          "Cordova",
+          "AngularJS",
+          "NodeJS",
+          "Ionic4",
+          "Capacitor",
+          "Angular",
+          "Typescript"          
         ]
       }
     ]

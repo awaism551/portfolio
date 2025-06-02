@@ -87,49 +87,51 @@ export default function Portfolio({
                   </div>
 
                   {/* Overlay */}
-                  <Box
-                    sx={{
-                      position: 'absolute',
-                      width: '100%',
-                      height: '100%',
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      backgroundColor: 'rgba(0, 0, 0, 0.7);',
-                      opacity: 0,
-                      transition: 'all 0.3s ease-in-out',
-                      '&:hover': {
-                        opacity: 1,
-                      },
-                    }}
-                  >
-                    <ButtonGroup variant="contained">
-                      {project.repoUrl && (
-                        <Button
-                          aria-label="Link to project GitHub repository"
-                          component="a"
-                          href={project.repoUrl}
-                          rel="noopener"
-                          startIcon={<GitHub />}
-                        target="_blank"
-                      >
-                        Repo
-                      </Button>
-                      )}
-                      {project.projectUrl && (
-                        <Button
-                          aria-label="Link to project live preview"
-                          component="a"
-                          href={project.projectUrl}
-                          rel="noopener"
-                          startIcon={<Visibility />}
-                        target="_blank"
-                      >
-                        Live
-                      </Button>
-                      )}
-                    </ButtonGroup>
-                  </Box>
+                  {(project.repoUrl || project.projectUrl) && (
+                    <Box
+                      sx={{
+                        position: 'absolute',
+                        width: '100%',
+                        height: '100%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        backgroundColor: 'rgba(0, 0, 0, 0.7);',
+                        opacity: 0,
+                        transition: 'all 0.3s ease-in-out',
+                        '&:hover': {
+                          opacity: 1,
+                        },
+                      }}
+                    >
+                      <ButtonGroup variant="contained">
+                        {project.repoUrl && (
+                          <Button
+                            aria-label="Link to project GitHub repository"
+                            component="a"
+                            href={project.repoUrl}
+                            rel="noopener"
+                            startIcon={<GitHub />}
+                            target="_blank"
+                          >
+                            Repo
+                          </Button>
+                        )}
+                        {project.projectUrl && (
+                          <Button
+                            aria-label="Link to project live preview"
+                            component="a"
+                            href={project.projectUrl}
+                            rel="noopener"
+                            startIcon={<Visibility />}
+                            target="_blank"
+                          >
+                            Live
+                          </Button>
+                        )}
+                      </ButtonGroup>
+                    </Box>
+                  )}
                 </Box>
 
                 <CardContent
@@ -144,17 +146,27 @@ export default function Portfolio({
                   }}
                 >
                   <div>
-                    <Link
-                      gutterBottom
-                      href={project.projectUrl ?? ''}
-                      rel="noopener"
-                      sx={{ display: 'inline-block' }}
-                      target="_blank"
-                      underline="hover"
-                      variant="h5"
-                    >
-                      {project.name}
-                    </Link>
+                    {project.projectUrl ? (
+                      <Link
+                        gutterBottom
+                        href={project.projectUrl}
+                        rel="noopener"
+                        sx={{ display: 'inline-block' }}
+                        target="_blank"
+                        underline="hover"
+                        variant="h5"
+                      >
+                        {project.name}
+                      </Link>
+                    ) : (
+                      <Typography
+                        gutterBottom
+                        sx={{ display: 'inline-block' }}
+                        variant="h5"
+                      >
+                        {project.name}
+                      </Typography>
+                    )}
                     <Typography
                       color="textSecondary"
                       component="p"
