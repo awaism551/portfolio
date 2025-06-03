@@ -25,6 +25,7 @@ export default async function mail(req: NextApiRequest, res: NextApiResponse) {
       text: `
           Email: ${email}
           Message: ${message}`,
+      replyTo: email,
     };
     try {
       await sgMail.send(msg);
