@@ -104,7 +104,7 @@ export default function ElevateAppBar() {
                 </AnimatedLink>
               ))}
 
-              <LanguageSelector />
+              {/* <LanguageSelector /> */}
 
               <IconButton
                 aria-label="Open Navigation"
