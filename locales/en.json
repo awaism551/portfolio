@@ -2,8 +2,8 @@
   "defaultSeo": {
     "title": "Awais Nasir | Senior Software Engineer",
     "description": "Awais Nasir is a Senior Software Engineer, experienced in creating beautiful and functional websites and web applications.",
-    "url": "https://www.awaisnasir15.com/",
-    "previewImage": "https://user-images.githubusercontent.com/4708484/93688063-050a8980-fa91-11ea-89ca-3530a9038393.png"
+    "url": "https://awais-nasir.com",
+    "previewImage": "/favicon-32x32.png"
   },
   "heroData": {
     "greetings": "HELLO, ",
@@ -16,7 +16,7 @@
   "aboutData": {
     "aboutTitle": "About me",
     "aboutItems": [
-      "Senior Software Engineer based in Lahore, Pakistan",
+      "Senior Software Engineer based in Doha, Qatar",
       "Extensive experience in developing and leading Web apps, Mobile apps and Server Side Services",
       "Enthusiastic team player who values clear communication, embraces feedback, and is always eager to learn and grow.",
       "Industries worked in: Software Services, Product Based Companies, Deep understanding of the entire Software Development process from front-end to back-end development",
