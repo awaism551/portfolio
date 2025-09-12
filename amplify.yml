@@ -25,6 +25,14 @@ applications:
             # Set environment variables
             - env | grep REACT_APP_ >> .env.production || true
             - env | grep NEXT_PUBLIC_ >> .env.production || true
+            # Explicitly pass server-side environment variables
+            - echo "OPENAI_API_KEY=$OPENAI_API_KEY" > .env.production
+            - echo "LANGSMITH_TRACING=$LANGSMITH_TRACING" > .env.production
+            - echo "LANGSMITH_ENDPOINT=$LANGSMITH_ENDPOINT" > .env.production
+            - echo "LANGSMITH_API_KEY=$LANGSMITH_API_KEY" > .env.production
+            - echo "LANGSMITH_PROJECT=$LANGSMITH_PROJECT" > .env.production
+            - echo "DATABASE_URL=$DATABASE_URL" >> .env.production
+            - echo "PGSSLMODE=$PGSSLMODE" >> .env.production
             # Build with error handling
             - npm run build || (echo "Build failed, trying with skipLibCheck" && npm run build:skip-checks)
       artifacts:
