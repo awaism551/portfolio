@@ -4,7 +4,15 @@ applications:
       phases:
         preBuild:
           commands:
+            # Clean npm cache to avoid conflicts
+            - npm cache clean --force
+            # Remove node_modules and package-lock for fresh install
+            - rm -rf node_modules package-lock.json
+            # Install dependencies
             - npm ci
+            # Verify Node and npm versions
+            - node --version
+            - npm --version
         build:
           commands:
             - env | grep REACT_APP_ >> .env.production
