@@ -35,7 +35,7 @@ const Chatbot: React.FC = () => {
     ]);
     const [inputValue, setInputValue] = useState('');
 
-    const handleSendMessage = () => {
+    const handleSendMessage = async () => {
         if (!inputValue.trim()) return;
 
         const userMessage: Message = {
@@ -46,18 +46,62 @@ const Chatbot: React.FC = () => {
         };
 
         setMessages(prev => [...prev, userMessage]);
+        const currentInput = inputValue;
         setInputValue('');
 
-        // Simulate bot response (will be replaced with LangChain integration)
-        setTimeout(() => {
-            const botMessage: Message = {
-                id: (Date.now() + 1).toString(),
-                text: "I'm still learning about the portfolio owner. This will be connected to LangChain soon to provide intelligent responses!",
-                isUser: false,
-                timestamp: new Date(),
-            };
-            setMessages(prev => [...prev, botMessage]);
-        }, 1000);
+        // Add loading message
+        const loadingMessage: Message = {
+            id: (Date.now() + 1).toString(),
+            text: "Thinking...",
+            isUser: false,
+            timestamp: new Date(),
+        };
+        setMessages(prev => [...prev, loadingMessage]);
+
+        try {
+            // Call the chatbot API
+            const response = await fetch('/api/chatbot/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    message: currentInput,
+                    topK: 3,
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to get response');
+            }
+
+            const data = await response.json();
+            
+            // Remove loading message and add actual response
+            setMessages(prev => {
+                const withoutLoading = prev.filter(msg => msg.id !== loadingMessage.id);
+                return [...withoutLoading, {
+                    id: (Date.now() + 2).toString(),
+                    text: data.response,
+                    isUser: false,
+                    timestamp: new Date(),
+                }];
+            });
+
+        } catch (error) {
+            console.error('Chat error:', error);
+            
+            // Remove loading message and add error response
+            setMessages(prev => {
+                const withoutLoading = prev.filter(msg => msg.id !== loadingMessage.id);
+                return [...withoutLoading, {
+                    id: (Date.now() + 2).toString(),
+                    text: "I apologize, but I'm having trouble processing your request right now. Please try again in a moment.",
+                    isUser: false,
+                    timestamp: new Date(),
+                }];
+            });
+        }
     };
 
     const handleKeyPress = (event: React.KeyboardEvent) => {

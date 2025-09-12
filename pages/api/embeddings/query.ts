@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { OpenAIEmbeddings } from '@langchain/openai';
 import { query } from '../../../utils/db';
 
 type QueryBody = {
@@ -17,20 +18,34 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(400).json({ error: 'q is required' });
   }
 
-  try {
-    // Compute embedding on the fly using SQL function if you have one; otherwise expect client to supply embedding.
-    // For simplicity, we require client to call the upsert route beforehand and then query using pgvector operators.
-    // This endpoint assumes you send an embedding vector; but here we'll demonstrate using the built-in cosine distance
-    // with a subselect that recomputes the embedding via the same model would require an extension, so we keep it simple.
-    // In practice, front-end should send the embedding computed server-side with OpenAI before this call.
+  if (!process.env.OPENAI_API_KEY) {
+    return res.status(500).json({ error: 'OPENAI_API_KEY not configured' });
+  }
 
-    // Placeholder: perform a naive lexical search as fallback
-    const { rows } = await query<{ doc_id: string; content: string; source: string | null; metadata: any }>(
-      `SELECT doc_id, content, source, metadata FROM ai_documents
-       WHERE content ILIKE '%' || $1 || '%'
-       ORDER BY length(content)
+  try {
+    // Generate embedding for the query
+    const embeddings = new OpenAIEmbeddings({ model: 'text-embedding-3-small' });
+    const queryVector = await embeddings.embedQuery(q);
+    const vectorString = `[${queryVector.join(',')}]`;
+
+    // Perform vector similarity search using cosine distance
+    const { rows } = await query<{ 
+      doc_id: string; 
+      content: string; 
+      source: string | null; 
+      metadata: any;
+      similarity: number;
+    }>(
+      `SELECT 
+        doc_id, 
+        content, 
+        source, 
+        metadata,
+        1 - (embedding <=> $1::vector) as similarity
+       FROM ai_documents
+       ORDER BY embedding <=> $1::vector
        LIMIT $2`,
-      [q, topK]
+      [vectorString, topK]
     );
 
     return res.status(200).json({ results: rows });
