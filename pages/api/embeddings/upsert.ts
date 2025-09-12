@@ -20,9 +20,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!docId || !content) {
     return res.status(400).json({ error: 'docId and content are required' });
   }
-  if (!process.env.OPENAI_API_KEY) {
-    console.error("OPENAI_API_KEY not configured")
-    return res.status(500).json({ error: 'OPENAI_API_KEY not configured' });
+  if (!process.env.REACT_APP_OPENAI_API_KEY) {
+    console.error("REACT_APP_OPENAI_API_KEY not configured")
+    return res.status(500).json({ error: 'REACT_APP_OPENAI_API_KEY not configured' });
   }
 
   try {

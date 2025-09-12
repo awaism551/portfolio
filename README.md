@@ -42,7 +42,7 @@ CREATE INDEX IF NOT EXISTS ai_documents_embedding_ivfflat
 Add to `.env.local`:
 
 ```env
-OPENAI_API_KEY=your_openai_api_key_here
+REACT_APP_OPENAI_API_KEY=your_openai_api_key_here
 DATABASE_URL=postgres://USER:PASSWORD@HOST:PORT/DB
 PGSSLMODE=require # if using managed Postgres that enforces SSL
 ```

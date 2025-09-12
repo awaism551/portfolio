@@ -18,8 +18,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(400).json({ error: 'q is required' });
   }
 
-  if (!process.env.OPENAI_API_KEY) {
-    return res.status(500).json({ error: 'OPENAI_API_KEY not configured' });
+  if (!process.env.REACT_APP_OPENAI_API_KEY) {
+    return res.status(500).json({ error: 'REACT_APP_OPENAI_API_KEY not configured' });
   }
 
   try {
