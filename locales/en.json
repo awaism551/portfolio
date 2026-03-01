@@ -25,18 +25,46 @@
     "resumeTitle": "Resume",
     "resumeParagraph": "You can check my resume in the link below.",
     "resumeButton": "Resume",
-    "resumeLink": "/resume/resume-en.pdf",
+    "resumeLink": "/resume/Awais-Senior Software Engineer-Qatar.pdf",
     "skillsTitle": "Skills"
   },
   "portfolioData": {
     "portfolioTitle": "Portfolio",
     "projects": [
       {
+        "name": "Memberships Portal",
+        "projectUrl": "https://members.qacreates.com/en",
+        "imgPath": "projectMedia/membershiplogo.jpg",
+        "imgAlt": "Memberships Portal preview",
+        "summary": "Led the architecture and delivery of a centralized Memberships Platform for QC+ and Qatar Museums, migrating 100K+ members from legacy systems and fully digitizing corporate, individual, and event-based memberships. The platform unified RBAC-driven admin workflows, membership approvals, ticketing, and QNB payment integrations, built on Next.js, NestJS, Hasura GraphQL, and Azure PostgreSQL, and now serves as the core system for cultural event access and monetization across all museums.",
+        "keyFeatures": [
+          "Memberships Management",
+          "Subscriptions Management",
+          "User-friendly Interface",
+          "Scalable Architecture",
+          "Modern Tech Stack"
+        ],
+        "technologies": [
+          "Next.js",
+          "NestJS",
+          "Hasura GraphQL",
+          "Azure PostgreSQL",
+          "Azure Blob Storage",
+          "Azure Key Vault",
+          "Azure Application Insights",
+          "Azure Monitor",
+          "Azure DevOps",
+          "Azure Pipelines",
+          "Azure Security",
+          "Azure Networking"
+        ]
+      },
+      {
         "name": "Daleel Aqar",
         "projectUrl": "https://www.daleelaqar.com/#/nav/home",
         "imgPath": "projectMedia/daleelaqar.png",
         "imgAlt": "Daleel Aqar preview",
-        "summary": "Daleel Aqar, a leading real estate enterprise in Jordan, reached out to me via LinkedIn for expert consultation on building their comprehensive real estate platform, enabling users to buy, sell, and rent properties. I provided end-to-end guidance throughout the entire product lifecycle — from initial planning to successful deployment — leveraging a modern tech stack that included Angular, NestJS, GraphQL, PostgreSQL, and AWS, structured within a monorepo architecture using Nx.dev for scalable development.",
+        "summary": "• Engaged as a Software Consultant by Port Software to advise and deliver key architectural guidance for Daleel Aqar, a large-scale real estate platform enabling property buying, selling, and rentals. Led end-to-end technical consulting across planning, architecture, and deployment, leveraging Angular, NestJS, GraphQL, PostgreSQL, and AWS, structured within an Nx.dev monorepo to ensure scalability, maintainability, and rapid team onboarding.\n• Architected app fully compliant to WCAG guidelines to get the official levelaccess certification\n• Established AWS based devops practices including dockerized services, bitbucket pipelines, monitoring, IAM roles management, secure infrastructure etc",
         "keyFeatures": [
           "Comprehensive Real Estate Platform",
           "User-friendly Interface",
@@ -58,7 +86,7 @@
         "projectUrl": "https://authenticstats.com/",
         "imgPath": "projectMedia/authentic.jpg",
         "imgAlt": "Authentic Influencers preview",
-        "summary": "This platform connects Instagram and TikTok influencers with brands for collaboration opportunities. It offers a complete environment where both parties can showcase their pitches, negotiate terms, and finalize business deals seamlessly. The client contacted me via LinkedIn for part-time consultation. I mentored the development team on engineering best practices and successfully led the project through to full deployment on AWS.",
+        "summary": "• Designed and delivered the architecture for a platform connecting Instagram and TikTok influencers with brands, enabling seamless pitching, negotiations, and deal finalization.\n• Implemented a React-based frontend integrated with a Directus headless CMS (Node.js) to provide dynamic content management and flexible editorial workflows.\n• Architected AWS-based microservices for authentication, content delivery, and notifications, ensuring scalability and security.\n• Established integrations between Directus CMS and AWS microservices via GraphQL/REST APIs, enabling smooth data exchange and API-driven development.\n• Mentored the development team on engineering best practices, modular design, and cloud deployment strategies, leading the project from initial architecture through to successful full deployment on AWS.",
         "keyFeatures": [
           "Instagram and TikTok Influencers",
           "Brands",
@@ -221,7 +249,7 @@
     "p2": "portfolio",
     "p3": " and ",
     "p4": "resume",
-    "resumeLink": "/resume/resume-en.pdf",
+    "resumeLink": "/resume/Awais-Senior Software Engineer-Qatar.pdf",
     "subtitle": "You can also find me on the following channels",
     "formTitle": "Get in touch",
     "firstNameLabel": "First Name",
