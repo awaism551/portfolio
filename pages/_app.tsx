@@ -8,7 +8,7 @@ import createEmotionCache from '../utils/createEmotionCache';
 import theme from '../components/styles/theme';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
-import Chatbot from '../components/Chatbot';
+// import Chatbot from '../components/Chatbot';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -33,7 +33,7 @@ export default function MyApp(props: MyAppProps) {
         <Navbar />
         <Component {...pageProps} />
         <Footer />
-        <Chatbot />
+        {/* <Chatbot /> */}
       </ThemeProvider>
     </CacheProvider>
   );

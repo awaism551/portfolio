@@ -62,35 +62,39 @@ export default function Portfolio({
                     xs: 'column',
                     lg: 'row',
                   },
+                  alignItems: 'stretch',
                 }}
               >
                 <Box
                   sx={{
                     display: 'flex',
-                    flexDirection: 'column',
                     position: 'relative',
                     flex: {
                       lg: '1 1 600px',
                     },
+                    minHeight: {
+                      xs: 240,
+                      lg: 370,
+                    },
+                    overflow: 'hidden',
                   }}
                 >
-                  <div>
-                    <Image
-                      alt={project.imgAlt}
-                      blurDataURL={getDataUrlWithShimmerEffect(600, 370)}
-                      height={370}
-                      layout="responsive"
-                      placeholder="blur"
-                      src={`/${project.imgPath}`}
-                      width={600}
-                    />
-                  </div>
+                  <Image
+                    alt={project.imgAlt}
+                    blurDataURL={getDataUrlWithShimmerEffect(600, 370)}
+                    layout="fill"
+                    objectFit="contain"
+                    placeholder="blur"
+                    src={`/${project.imgPath}`}
+                  />
 
                   {/* Overlay */}
                   {(project.repoUrl || project.projectUrl) && (
                     <Box
                       sx={{
                         position: 'absolute',
+                        top: 0,
+                        left: 0,
                         width: '100%',
                         height: '100%',
                         display: 'flex',
