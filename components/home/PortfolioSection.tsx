@@ -28,7 +28,6 @@ interface Project {
   imgAlt: string;
   summary: string;
   keyFeatures: string[];
-  technologies: string[];
 }
 
 interface PortfolioData {
@@ -201,18 +200,6 @@ export default function Portfolio({
                         </ListItem>
                       ))}
                     </List>
-                  </div>
-
-                  <div>
-                    {project.technologies.map((e) => (
-                      <Chip
-                        key={e}
-                        label={e}
-                        size="small"
-                        sx={{ m: 0.5 }}
-                        variant="outlined"
-                      />
-                    ))}
                   </div>
                 </CardContent>
               </Card>

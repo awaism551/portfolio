@@ -13,13 +13,16 @@ import {
 } from '@mui/material/';
 import { Code, Description } from '@mui/icons-material';
 
-import skillIcons from './constants/skillIcons';
-
 const CustomDivider = styled(Divider)(({ theme }) => ({
   height: '4px',
   width: '60px',
   backgroundColor: theme.palette.primary.main,
 }));
+
+interface SkillCategory {
+  category: string;
+  items: string[];
+}
 
 interface AboutData {
   aboutTitle: string;
@@ -29,6 +32,7 @@ interface AboutData {
   resumeButton: string;
   resumeLink: string;
   skillsTitle: string;
+  skills?: SkillCategory[];
 }
 
 export default function About({ aboutData: t }: { aboutData: AboutData }) {
@@ -60,7 +64,7 @@ export default function About({ aboutData: t }: { aboutData: AboutData }) {
             </List>
           </Grid>
 
-          <Grid item md={4} xs={12}>
+          {/* <Grid item md={4} xs={12}>
             <Typography gutterBottom component="h2" variant="h3">
               {t.resumeTitle}
             </Typography>
@@ -84,7 +88,7 @@ export default function About({ aboutData: t }: { aboutData: AboutData }) {
             >
               {t.resumeButton}
             </Button>
-          </Grid>
+          </Grid> */}
 
           <Grid item md={4} xs={12}>
             <Typography gutterBottom component="h2" variant="h3">
@@ -97,28 +101,18 @@ export default function About({ aboutData: t }: { aboutData: AboutData }) {
             <Box
               sx={{
                 display: 'flex',
-                flexWrap: 'wrap',
-                fontSize: '4rem',
-                justifyContent: {
-                  xs: 'space-around',
-                  md: 'initial',
-                },
+                flexDirection: 'column',
+                gap: 2,
               }}
             >
-              {skillIcons.map((skillIcon) => (
-                <Box
-                  key={skillIcon.label}
-                  sx={{
-                    m: {
-                      xs: '0 0.4rem',
-                      md: '0 1.3rem 0 0',
-                    },
-                    '&:hover': {
-                      color: 'primary.light',
-                    },
-                  }}
-                >
-                  {skillIcon.icon}
+              {t.skills?.map((skillGroup) => (
+                <Box key={skillGroup.category}>
+                  <Typography variant="h6" color="primary.main" gutterBottom>
+                    {skillGroup.category}
+                  </Typography>
+                  <Typography variant="body1" color="text.secondary" sx={{ fontWeight: 500 }}>
+                    {skillGroup.items.join(' | ')}
+                  </Typography>
                 </Box>
               ))}
             </Box>

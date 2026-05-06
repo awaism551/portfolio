@@ -9,24 +9,143 @@
     "greetings": "HELLO, ",
     "introduction": "I'm Awais Nasir",
     "role": "Senior Software Engineer",
-    "paragraph": "Passionate about coding, and making my client ideas come true.",
+    "paragraph": "Building reliable, scalable systems that solve real problems and deliver lasting value.",
     "button1": "Check my work",
     "button2": "Contact me"
   },
   "aboutData": {
     "aboutTitle": "About me",
     "aboutItems": [
-      "Senior Software Engineer based in Doha, Qatar",
-      "Extensive experience in developing and leading Web apps, Mobile apps and Server Side Services",
-      "Enthusiastic team player who values clear communication, embraces feedback, and is always eager to learn and grow.",
-      "Industries worked in: Software Services, Product Based Companies, Deep understanding of the entire Software Development process from front-end to back-end development",
-      "Outside of work, I enjoy playing Chess and Cricket, Watching Movies and Reading Books."
+      "Senior Software Engineer based in Doha, Qatar, open to onsite, hybrid, and remote opportunities globally.",
+      "8+ years of experience delivering production-grade platforms across startups, product companies, and enterprise environments spanning AI, workforce management, real estate, and cultural institutions.",
+      "Deep understanding of the full software development lifecycle, from early architecture decisions and team alignment through to production deployment and post-launch operations.",
+      "I architect for the long term, take ownership end-to-end, and bridge the gap between technical depth and business outcomes.",
+      "Outside of work, I enjoy playing Chess and Cricket, watching movies, and reading books."
     ],
     "resumeTitle": "Resume",
     "resumeParagraph": "You can check my resume in the link below.",
     "resumeButton": "Resume",
     "resumeLink": "/resume/Awais-Senior Software Engineer-Qatar.pdf",
-    "skillsTitle": "Skills"
+    "skillsTitle": "Skills",
+    "skills": [
+      {
+        "category": "Languages",
+        "items": [
+          "JavaScript",
+          "TypeScript",
+          "Go",
+          "Python",
+          "Java",
+          "C#",
+          ".NET",
+          "Bash",
+          "SQL"
+        ]
+      },
+      {
+        "category": "Frontend",
+        "items": [
+          "React",
+          "Next.js",
+          "Angular",
+          "AngularJS",
+          "Ionic",
+          "Tailwind CSS",
+          "Material UI",
+          "SCSS"
+        ]
+      },
+      {
+        "category": "Backend",
+        "items": [
+          "Node.js",
+          "NestJS",
+          "Express.js",
+          "Spring Boot",
+          "Django",
+          "Flask"
+        ]
+      },
+      {
+        "category": "Databases",
+        "items": [
+          "PostgreSQL",
+          "MySQL",
+          "MongoDB",
+          "Redis",
+          "DynamoDB",
+          "Firebase",
+          "MariaDB",
+          "Apache Cassandra",
+          "Greenplum"
+        ]
+      },
+      {
+        "category": "Cloud & DevOps",
+        "items": [
+          "AWS",
+          "Microsoft Azure",
+          "Docker",
+          "Kubernetes",
+          "CI/CD",
+          "Prometheus",
+          "Grafana",
+          "Jenkins"
+        ]
+      },
+      {
+        "category": "AI & Data",
+        "items": [
+          "OpenAI APIs",
+          "LangChain",
+          "pgvector",
+          "Apache Airflow",
+          "ETL Pipelines"
+        ]
+      },
+      {
+        "category": "Security & Identity",
+        "items": [
+          "OAuth2",
+          "OIDC",
+          "SAML",
+          "Keycloak",
+          "RBAC",
+          "ABAC",
+          "JWT",
+          "MFA"
+        ]
+      },
+      {
+        "category": "APIs & Integration",
+        "items": [
+          "REST",
+          "GraphQL",
+          "gRPC",
+          "WebSockets",
+          "Kong",
+          "Nginx"
+        ]
+      },
+      {
+        "category": "Architecture",
+        "items": [
+          "Microservices",
+          "Event-Driven Systems",
+          "Distributed Systems",
+          "System Design",
+          "Multi-Tenant Architecture"
+        ]
+      },
+      {
+        "category": "Testing",
+        "items": [
+          "Jest",
+          "Cypress",
+          "Playwright"
+        ]
+      }
+    ]
   },
   "portfolioData": {
     "portfolioTitle": "Portfolio",
@@ -36,27 +155,13 @@
         "projectUrl": "https://members.qacreates.com/en",
         "imgPath": "projectMedia/membershiplogo.jpg",
         "imgAlt": "Memberships Portal preview",
-        "summary": "Led the architecture and delivery of a centralized Memberships Platform for QC+ and Qatar Museums, migrating 100K+ members from legacy systems and fully digitizing corporate, individual, and event-based memberships. The platform unified RBAC-driven admin workflows, membership approvals, ticketing, and QNB payment integrations, built on Next.js, NestJS, Hasura GraphQL, and Azure PostgreSQL, and now serves as the core system for cultural event access and monetization across all museums.",
+        "summary": "Led the architecture and delivery of a centralized Memberships Platform for QC+ and Qatar Museums, migrating 100K+ members from legacy systems and fully digitizing corporate, individual, and event-based memberships. The platform unified RBAC-driven admin workflows, membership approvals, ticketing, and payment integrations, and now serves as the core system for cultural event access and monetization across all museums.",
         "keyFeatures": [
           "Memberships Management",
           "Subscriptions Management",
           "User-friendly Interface",
           "Scalable Architecture",
           "Modern Tech Stack"
-        ],
-        "technologies": [
-          "Next.js",
-          "NestJS",
-          "Hasura GraphQL",
-          "Azure PostgreSQL",
-          "Azure Blob Storage",
-          "Azure Key Vault",
-          "Azure Application Insights",
-          "Azure Monitor",
-          "Azure DevOps",
-          "Azure Pipelines",
-          "Azure Security",
-          "Azure Networking"
         ]
       },
       {
@@ -64,21 +169,13 @@
         "projectUrl": "https://www.daleelaqar.com/#/nav/home",
         "imgPath": "projectMedia/daleelaqar.png",
         "imgAlt": "Daleel Aqar preview",
-        "summary": "• Engaged as a Software Consultant by Port Software to advise and deliver key architectural guidance for Daleel Aqar, a large-scale real estate platform enabling property buying, selling, and rentals. Led end-to-end technical consulting across planning, architecture, and deployment, leveraging Angular, NestJS, GraphQL, PostgreSQL, and AWS, structured within an Nx.dev monorepo to ensure scalability, maintainability, and rapid team onboarding.\n• Architected app fully compliant to WCAG guidelines to get the official levelaccess certification\n• Established AWS based devops practices including dockerized services, bitbucket pipelines, monitoring, IAM roles management, secure infrastructure etc",
+        "summary": "Engaged as a Software Consultant to advise and deliver key architectural guidance for Daleel Aqar, a large-scale real estate platform enabling property buying, selling, and rentals. Led end-to-end technical consulting across planning, architecture, and deployment, structured within a monorepo to ensure scalability, maintainability, and rapid team onboarding. Architected the platform to be fully compliant with WCAG accessibility guidelines, achieving the official LevelAccess certification. Established cloud-based DevOps practices including containerized services, automated pipelines, monitoring, IAM roles management, and secure infrastructure.",
         "keyFeatures": [
           "Comprehensive Real Estate Platform",
           "User-friendly Interface",
           "Scalable Architecture",
           "Modern Tech Stack",
           "Monorepo Development"
-        ],
-        "technologies": [
-          "Angular",
-          "NestJS",
-          "GraphQL",
-          "PostgreSQL",
-          "AWS",
-          "Nx.dev"
         ]
       },
       {
@@ -86,7 +183,7 @@
         "projectUrl": "https://authenticstats.com/",
         "imgPath": "projectMedia/authentic.jpg",
         "imgAlt": "Authentic Influencers preview",
-        "summary": "• Designed and delivered the architecture for a platform connecting Instagram and TikTok influencers with brands, enabling seamless pitching, negotiations, and deal finalization.\n• Implemented a React-based frontend integrated with a Directus headless CMS (Node.js) to provide dynamic content management and flexible editorial workflows.\n• Architected AWS-based microservices for authentication, content delivery, and notifications, ensuring scalability and security.\n• Established integrations between Directus CMS and AWS microservices via GraphQL/REST APIs, enabling smooth data exchange and API-driven development.\n• Mentored the development team on engineering best practices, modular design, and cloud deployment strategies, leading the project from initial architecture through to successful full deployment on AWS.",
+        "summary": "Designed and delivered the architecture for a platform connecting Instagram and TikTok influencers with brands, enabling seamless pitching, negotiations, and deal finalization. Implemented a frontend integrated with a headless CMS backend to provide dynamic content management and flexible editorial workflows. Architected cloud-based microservices for authentication, content delivery, and notifications, ensuring scalability and security. Established API-driven integrations between the CMS and backend services, enabling smooth data exchange across the platform. Mentored the development team on engineering best practices, modular design, and cloud deployment strategies, leading the project from initial architecture through to successful full deployment.",
         "keyFeatures": [
           "Instagram and TikTok Influencers",
           "Brands",
@@ -94,15 +191,6 @@
           "Pitches",
           "Negotiate Terms",
           "Finalize Business Deals"
-        ],
-        "technologies": [
-          "React",
-          "NextJS",
-          "Ruby on Rails",
-          "AWS",
-          "PostgreSQL",
-          "Docker",
-          "Kubernetes"
         ]
       },
       {
@@ -116,20 +204,13 @@
           "Live preview of each Account/Client/Tenant",
           "Customizable reports",
           "Role Based Access Control"
-        ],
-        "technologies": [
-          "React",
-          "NextJS",
-          "Material-UI",
-          "Nestjs",
-          "MySQL"
         ]
       },
       {
         "name": "WFM",
         "imgPath": "projectMedia/wfm.jpg",
         "imgAlt": "WFM preview",
-        "summary": "Workforce Management Software is being used in Contact Centers",
+        "summary": "A large-scale enterprise workforce management platform built for contact centers across multiple global clients. The platform handled the full complexity of managing agent workforces at scale, from day-to-day scheduling visibility to long-term capacity planning. Each client deployment was fully configurable to their operational structure, supporting distinct roles, permissions, organizational hierarchies, and regional requirements including timezone-aware access and scheduling across geographies. Core capabilities included agent scheduling across daily, weekly, and monthly views, structured time-off request workflows for agents, supervisors, and managers, and the assignment of agents to workforce groups, skills, and planning groups based on each client's service delivery model. Beyond scheduling, the platform incorporated statistical forecasting to predict future workforce demand based on historical data, helping operations teams plan ahead rather than react. A suite of live and historical reporting views gave management the broader visibility they needed to make informed decisions about capacity, performance, and resource allocation. The platform served real contact center operations globally, where reliability, accuracy, and configurability were not optional but critical to daily business continuity.",
         "keyFeatures": [
           "Scheduling of Agents",
           "TimeOff Requests Modules",
@@ -137,38 +218,17 @@
           "Forecasting",
           "Various Live and historical reporting",
           "ETL (export,transpose,load) based Module to load and sync the historical data from Afiniti dbs to Client Environments"
-        ],
-        "technologies": [
-          "React",
-          "NextJS",
-          "PostgreSQL",
-          "NodeJS",
-          "C#",
-          "Vb.net",
-          "Material-UI",
-          "Nestjs",
-          "Typeorm"
         ]
       },
       {
         "name": "Visenya",
         "imgPath": "projectMedia/visenya.png",
         "imgAlt": "Visenya",
-        "summary": "Built Platform to Automate Data Pipelines for AI and Data Integration Teams at Afiniti",
+        "summary": "Designed and delivered an internal platform that automated data pipeline creation and management for AI and Data Integration teams, significantly reducing the manual effort involved in setting up and maintaining complex data workflows. Worked in close collaboration with AI researchers and data engineers on a daily basis, translating their operational needs into platform features that made their workflows faster and more reliable. A key part of the platform was an abstraction layer built on top of an industry-standard workflow orchestration engine, simplifying how teams defined, triggered, and monitored data pipelines without needing deep infrastructure knowledge. The platform became a core productivity tool for internal teams, compressing pipeline setup time and enabling data and AI teams to focus on their actual work rather than infrastructure management.",
         "keyFeatures": [
           "Automated Data Pipelines",
           "Data Integration",
           "AI and Data Integration Teams"
-        ],
-        "technologies": [
-          "React",
-          "NextJS",
-          "NodeJS",
-          "Nestjs",
-          "Python",
-          "Airflow",
-          "Postgres",
-          "Docker"
         ]
       },
       {
@@ -181,15 +241,6 @@
           "Data Integration",
           "Data Migration",
           "Data Synchronization"
-        ],
-        "technologies": [
-          "C#",
-          "Vb.net",
-          "SQL",
-          "PostgreSQL",
-          "Docker",
-          "MySQL",
-          "Greenplum"
         ]
       },
       {
@@ -202,13 +253,6 @@
           "Database Backup",
           "Database Logs",
           "Database Schema Management"
-        ],
-        "technologies": [
-          "Bash Scripting",
-          "SQL",
-          "PostgreSQL",
-          "MySQL",
-          "Greenplum"
         ]
       },
       {
@@ -224,16 +268,6 @@
           "Hoppers",
           "Boilers",
           "IOT"
-        ],
-        "technologies": [
-          "Ionic1",
-          "Cordova",
-          "AngularJS",
-          "NodeJS",
-          "Ionic4",
-          "Capacitor",
-          "Angular",
-          "Typescript"          
         ]
       }
     ]
