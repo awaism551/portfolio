@@ -25,6 +25,7 @@
     "@mui/material": "^5.10.13",
     "@next/font": "^13.0.2",
     "@sendgrid/mail": "^7.4.6",
+    "aws-amplify": "^6.17.0",
     "clsx": "^1.2.1",
     "formik": "^2.2.9",
     "next": "^13.0.2",
@@ -36,15 +37,21 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@aws-amplify/backend": "^1.22.0",
+    "@aws-amplify/backend-cli": "^1.8.2",
+    "@types/node": "^20.0.0",
     "@types/pg": "^8.15.5",
     "@types/react": "^18.0.25",
     "@types/react-dom": "18.0.8",
+    "aws-cdk-lib": "^2.234.1",
+    "constructs": "^10.6.0",
+    "esbuild": "^0.28.0",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.2",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.7.1",
-    "typescript": "^5.2.2",
-    "@types/node": "^20.0.0"
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   },
   "overrides": {
     "zod": "^3.22.4"
