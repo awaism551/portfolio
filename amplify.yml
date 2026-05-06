@@ -6,7 +6,7 @@ applications:
           commands:
             # Clean everything for fresh start
             - npm cache clean --force
-            - rm -rf node_modules
+            - rm -rf node_modules package-lock.json
             # Check versions for debugging
             - node --version
             - npm --version
