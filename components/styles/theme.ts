@@ -1,5 +1,5 @@
 import { Roboto } from '@next/font/google';
-import { createTheme, responsiveFontSizes } from '@mui/material';
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import { cyan, pink } from '@mui/material/colors';
 
 export const roboto = Roboto({

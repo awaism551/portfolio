@@ -1,11 +1,14 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 
+import dynamic from 'next/dynamic';
+
 import HeroSection from '../components/home/HeroSection';
-import AboutSection from '../components/home/AboutSection';
-import PortfolioSection from '../components/home/PortfolioSection';
-// import BlogSection from '../components/home/BlogSection';
-import ContactSection from '../components/home/ContactSection';
+
+const AboutSection = dynamic(() => import('../components/home/AboutSection'));
+const PortfolioSection = dynamic(() => import('../components/home/PortfolioSection'));
+const ContactSection = dynamic(() => import('../components/home/ContactSection'));
+// const BlogSection = dynamic(() => import('../components/home/BlogSection'));
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const response = await import(`../locales/${locale}.json`);
