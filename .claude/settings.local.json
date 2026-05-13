@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/personal docs/resumes/**)",
+      "Bash(extract-text \"Awais-Senior Software Engineer-Qatar.docx\")",
+      "Bash(python -c ' *)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)"
+    ]
+  }
+}
