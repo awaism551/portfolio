@@ -43,7 +43,7 @@ export default function About() {
             <span className="gradient-text">Who I Am</span>
           </h2>
           <p className="text-base max-w-xl mx-auto" style={{ color: "var(--text-muted)" }}>
-            A passionate engineer who loves solving hard problems with elegant code.
+            Building systems that scale — reliably, securely, and built to last.
           </p>
         </div>
 
@@ -55,21 +55,33 @@ export default function About() {
               style={{ background: "var(--surface-2)", borderColor: "var(--border)" }}
             >
               <p className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                I&apos;m a <span style={{ color: "var(--foreground)", fontWeight: 600 }}>Senior Software Engineer</span>,
-                {" "}AI-Native Developer, and Automation Engineer based in <span style={{ color: "var(--secondary)" }}>Doha, Qatar</span>.
-                With over 8 years of experience, I specialize in building scalable, production-ready systems
-                that blend modern web technologies with cutting-edge AI capabilities.
+                I am a <span style={{ color: "var(--foreground)", fontWeight: 600 }}>Senior Software Engineer</span>{" "}
+                with <span style={{ color: "var(--secondary)" }}>8+ years of experience</span> delivering
+                production-grade platforms across startups, product companies, and enterprise environments.
+                My work spans backend architecture, cloud infrastructure, AI-integrated systems, and full-stack
+                product delivery, always with a focus on systems that are reliable, scalable, and built to last.
               </p>
               <p className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                My recent focus is on <span style={{ color: "var(--primary-light)" }}>agentic workflows</span> using
-                LangChain and OpenAI — building tools that automate operational bottlenecks and deliver
-                real business value. I&apos;ve led architectural decisions on platforms serving 100K+ users,
-                integrating complex payment systems, RBAC flows, and multi-cloud infrastructure.
+                Over the years I have worked across industries including AI, workforce management, real estate,
+                media, and cultural institutions, contributing to platforms that serve{" "}
+                <span style={{ color: "var(--primary-light)" }}>hundreds of thousands of users globally</span>.
+                I have led projects end-to-end: from early architecture decisions and team alignment through
+                to production deployment and post-launch operations.
               </p>
-              <p className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                I thrive in cross-functional teams, mentoring junior developers, and translating
-                business requirements into clean, maintainable architectures.
-              </p>
+              <div className="space-y-2 pt-1">
+                <p className="text-sm font-semibold" style={{ color: "var(--foreground)" }}>What defines my approach:</p>
+                {[
+                  "I architect for the long term, not just the deadline",
+                  "I take ownership of the full lifecycle, not just my slice of it",
+                  "I bridge the gap between technical depth and business outcomes",
+                  "I mentor teams and raise engineering standards, not just ship features",
+                ].map((point) => (
+                  <div key={point} className="flex items-start gap-2 text-sm" style={{ color: "var(--text-muted)" }}>
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: "var(--secondary)" }} />
+                    {point}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 

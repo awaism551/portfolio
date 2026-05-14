@@ -11,9 +11,9 @@ export default function Footer() {
           <Code2 className="w-4 h-4" style={{ color: "var(--primary)" }} />
           <span className="font-semibold text-sm gradient-text">Awais Nasir</span>
         </div>
-        <p className="text-xs flex items-center gap-1" style={{ color: "var(--text-muted)" }}>
+        {/* <p className="text-xs flex items-center gap-1" style={{ color: "var(--text-muted)" }}>
           Built with <Heart className="w-3 h-3 text-red-400" /> using Next.js 15 & Tailwind CSS
-        </p>
+        </p> */}
         <p className="text-xs" style={{ color: "var(--text-muted)" }}>
           © {new Date().getFullYear()} Awais Nasir. All rights reserved.
         </p>

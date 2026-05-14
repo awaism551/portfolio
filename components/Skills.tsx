@@ -2,7 +2,7 @@ import { Cpu, Globe, Server, Database, Cloud, Shield, GitBranch, Wrench, Layers,
 
 const skillGroups = [
   {
-    category: "AI & Machine Learning",
+    category: "AI Integration & Automation",
     icon: Cpu,
     color: "#f59e0b",
     skills: ["LangChain", "OpenAI APIs", "pgvector", "Semantic Search", "AI Chatbots", "Agentic Workflows", "Apache Airflow"],
@@ -11,7 +11,7 @@ const skillGroups = [
     category: "Frontend",
     icon: Globe,
     color: "#06b6d4",
-    skills: ["Next.js", "React.js", "Angular 2+", "AngularJS", "TypeScript", "JavaScript ES6", "HTML5", "Apollo Angular", "Backbone.js", "jQuery"],
+    skills: ["Next.js", "React.js", "Angular 2+", "AngularJS", "TypeScript", "JavaScript ES6", "Apollo Angular"],
   },
   {
     category: "Backend",
@@ -35,7 +35,7 @@ const skillGroups = [
     category: "Security & Auth",
     icon: Shield,
     color: "#ef4444",
-    skills: ["Keycloak", "OAuth 2.0", "OIDC", "SAML", "NextAuth.js", "Firebase Auth", "AWS IAM", "RBAC", "ABAC", "MFA / 2FA", "WCAG"],
+    skills: ["Keycloak", "NextAuth.js", "Firebase Auth", "AWS IAM"],
   },
   {
     category: "State & APIs",
@@ -71,7 +71,7 @@ const skillGroups = [
     category: "Headless CMS & Tools",
     icon: GitBranch,
     color: "#8b5cf6",
-    skills: ["Strapi", "Directus", "KeystoneJS", "Git", "GitHub", "Bitbucket", "Jira", "Nx.dev", "Webpack", "Babel"],
+    skills: ["Directus", "Git", "GitHub", "Bitbucket", "Jira", "Nx.dev", "Webpack", "Babel"],
   },
 ];
 

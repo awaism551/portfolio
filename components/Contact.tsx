@@ -26,10 +26,10 @@ const contactInfo = [
 
 const socials = [
   { icon: GitFork, label: "GitHub", href: "https://github.com/awaism551", color: "#6366f1" },
-  { icon: Link, label: "LinkedIn", href: "https://linkedin.com", color: "#06b6d4" },
-  { icon: ExternalLink, label: "StackOverflow", href: "https://stackoverflow.com", color: "#f59e0b" },
-  { icon: ExternalLink, label: "HackerRank", href: "https://hackerrank.com", color: "#10b981" },
-  { icon: ExternalLink, label: "Credly", href: "https://credly.com", color: "#8b5cf6" },
+  { icon: Link, label: "LinkedIn", href: "https://www.linkedin.com/in/awais-nasir-dev/", color: "#06b6d4" },
+  { icon: ExternalLink, label: "StackOverflow", href: "https://stackoverflow.com/users/5568646/muhammad-awais", color: "#f59e0b" },
+  { icon: ExternalLink, label: "HackerRank", href: "https://www.hackerrank.com/profile/awaism551", color: "#10b981" },
+  { icon: ExternalLink, label: "Credly", href: "https://www.credly.com/users/awais-nasir.104ea20a/", color: "#8b5cf6" },
 ];
 
 export default function Contact() {

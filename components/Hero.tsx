@@ -5,9 +5,8 @@ import { MapPin, Mail, Phone, GitFork, Link, ExternalLink, ChevronDown } from "l
 
 const roles = [
   "Senior Software Engineer",
-  "AI-Native Developer",
-  "Automation Engineer",
   "Full Stack Architect",
+  "AI-Native Developer",
 ];
 
 export default function Hero() {
@@ -91,10 +90,9 @@ export default function Hero() {
           className="text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed"
           style={{ color: "var(--text-muted)" }}
         >
-          Software Engineer with a focus on building agentic workflows and AI-powered tools.
-          Proven track record deploying AI-powered solutions that solve operational bottlenecks.
-          Specialized in <span style={{ color: "var(--secondary)" }}>LangChain</span>,{" "}
-          <span style={{ color: "var(--secondary)" }}>OpenAI</span>, and automated data pipelines.
+          Software Engineer &amp; Full Stack Architect with a focus on building{" "}
+          <span style={{ color: "var(--secondary)" }}>secure, scalable, resilient</span>,
+          high-performing and cost-effective software solutions.
         </p>
 
         {/* Meta */}
@@ -142,8 +140,8 @@ export default function Hero() {
         <div className="flex items-center justify-center gap-4">
           {[
             { href: "https://github.com/awaism551", label: "GitHub", icon: GitFork },
-            { href: "https://linkedin.com", label: "LinkedIn", icon: Link },
-            { href: "https://stackoverflow.com", label: "StackOverflow", icon: ExternalLink },
+            { href: "https://www.linkedin.com/in/awais-nasir-dev/", label: "LinkedIn", icon: Link },
+            { href: "https://stackoverflow.com/users/5568646/muhammad-awais", label: "StackOverflow", icon: ExternalLink },
           ].map(({ href, label, icon: Icon }) => (
             <a
               key={label}
