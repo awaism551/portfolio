@@ -15,7 +15,9 @@
       "mcp__Claude_Preview__preview_start",
       "Bash(Start-Sleep 8)",
       "Bash(Write-Host \"done\")",
-      "mcp__Claude_in_Chrome__tabs_context_mcp"
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
