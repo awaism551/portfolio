@@ -16,7 +16,7 @@ const experiences = [
   },
   {
     company: "Port Software | Daleel Aqar",
-    role: "Software Engineer (Consulting)",
+    role: "Software Engineer",
     location: "Doha, Qatar",
     period: "Feb 2025 – Aug 2025",
     tags: ["Angular", "NestJS", "GraphQL", "PostgreSQL", "AWS", "Nx.dev", "WCAG"],
