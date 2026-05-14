@@ -1,6 +1,5 @@
 import { Roboto } from '@next/font/google';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
-import { cyan, pink } from '@mui/material/colors';
 
 export const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -14,8 +13,22 @@ const theme = responsiveFontSizes(
   createTheme({
     palette: {
       mode: 'dark',
-      primary: cyan,
-      secondary: pink,
+      primary: {
+        main: '#6366f1', // Indigo 500
+        light: '#818cf8',
+        dark: '#4f46e5',
+        contrastText: '#ffffff',
+      },
+      secondary: {
+        main: '#14b8a6', // Teal 500
+        light: '#2dd4bf',
+        dark: '#0d9488',
+        contrastText: '#ffffff',
+      },
+      background: {
+        default: '#0f172a', // Slate 900
+        paper: '#1e293b',   // Slate 800
+      },
       error: {
         main: '#ff6358',
       },

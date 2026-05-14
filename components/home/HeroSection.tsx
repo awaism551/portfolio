@@ -15,8 +15,8 @@ export default function Hero({ heroData: t }: { heroData: HeroData }) {
       <Container
         sx={{
           minHeight: {
-            xs: '100vh',
-            lg: '95vh',
+            xs: '70vh',
+            lg: '75vh',
           },
           display: 'flex',
           flexDirection: 'column',
@@ -26,10 +26,12 @@ export default function Hero({ heroData: t }: { heroData: HeroData }) {
           },
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'right -2rem bottom',
-          backgroundSize: '60%'
+          backgroundSize: '55%',
+          pt: { xs: 8, lg: 12 },
+          pb: { xs: 4, lg: 8 },
         }}
       >
-        <Box mb={7}>
+        <Box mb={4}>
           <Typography gutterBottom component="h4" variant="h5">
             <Typography color="primary" component="span" variant="inherit">
               {t.greetings}

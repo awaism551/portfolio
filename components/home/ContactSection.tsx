@@ -175,7 +175,7 @@ export default function Contact({
           </CardContent>
         </Card>
 
-        <Typography align="center" component="h3" mb={2} variant="h4">
+        {/* <Typography align="center" component="h3" mb={2} variant="h4">
           {t.formTitle}
         </Typography>
 
@@ -264,7 +264,7 @@ export default function Contact({
           displayMessage={displayMessage}
           senderFirstName={senderFirstName}
           setDisplayMessage={setDisplayMessage}
-        />
+        /> */}
       </Container>
     </Box>
   );
