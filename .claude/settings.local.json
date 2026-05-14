@@ -4,7 +4,18 @@
       "Read(//d/personal docs/resumes/**)",
       "Bash(extract-text \"Awais-Senior Software Engineer-Qatar.docx\")",
       "Bash(python -c ' *)",
-      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); console.log\\(Object.keys\\(l\\).filter\\(k => k.toLowerCase\\(\\).includes\\('git'\\) || k.toLowerCase\\(\\).includes\\('link'\\)\\)\\)\")",
+      "Bash(npm run *)",
+      "Bash(Start-Sleep -Seconds 5)",
+      "Bash(Get-Content \"C:\\\\Users\\\\Lenovo\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--Personal-Projects-portfolio-portfolio-claudecode\\\\b2641df8-e7e2-440a-82ab-a1e1d4d69ef2\\\\tasks\\\\bopeei3yz.output\")",
+      "Bash(mkdir \"D:\\\\Personal Projects\\\\portfolio\\\\portfolio-claudecode\\\\.claude\" 2>&1)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(Start-Sleep 8)",
+      "Bash(Write-Host \"done\")",
+      "mcp__Claude_in_Chrome__tabs_context_mcp"
     ]
   }
 }
