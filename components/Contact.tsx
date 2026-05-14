@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, GitFork, Link, ExternalLink, Send } from "lucide-react";
+import { Mail, Phone, MapPin, GitFork, Link, ExternalLink, Send, PlayCircle } from "lucide-react";
 
 const contactInfo = [
   {
@@ -30,6 +30,7 @@ const socials = [
   { icon: ExternalLink, label: "StackOverflow", href: "https://stackoverflow.com/users/5568646/muhammad-awais", color: "#f59e0b" },
   { icon: ExternalLink, label: "HackerRank", href: "https://www.hackerrank.com/profile/awaism551", color: "#10b981" },
   { icon: ExternalLink, label: "Credly", href: "https://www.credly.com/users/awais-nasir.104ea20a/", color: "#8b5cf6" },
+  { icon: PlayCircle, label: "YouTube", href: "https://www.youtube.com/channel/UChkO7lbMmglC9o4Or_n5Dmg", color: "#ef4444" },
 ];
 
 export default function Contact() {
@@ -57,7 +58,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-1 gap-10 max-w-xl mx-auto w-full">
           {/* Left — contact details */}
           <div className="space-y-6">
             <div>
@@ -121,7 +122,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right — message form */}
+          {/* Contact form — commented out until Twilio/SendGrid API is configured
           <div
             className="p-6 rounded-2xl border"
             style={{ background: "var(--surface-2)", borderColor: "var(--border)" }}
@@ -129,92 +130,9 @@ export default function Contact() {
             <h3 className="text-base font-bold mb-5" style={{ color: "var(--foreground)" }}>
               Send a Message
             </h3>
-            <form
-              action={`mailto:awaism551@gmail.com`}
-              method="POST"
-              encType="text/plain"
-              className="space-y-4"
-            >
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-medium mb-1.5" style={{ color: "var(--text-muted)" }}>
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    placeholder="John Doe"
-                    className="w-full px-3 py-2.5 rounded-lg text-sm outline-none border transition-colors focus:border-indigo-500"
-                    style={{
-                      background: "var(--surface)",
-                      borderColor: "var(--border)",
-                      color: "var(--foreground)",
-                    }}
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-medium mb-1.5" style={{ color: "var(--text-muted)" }}>
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder="john@company.com"
-                    className="w-full px-3 py-2.5 rounded-lg text-sm outline-none border transition-colors focus:border-indigo-500"
-                    style={{
-                      background: "var(--surface)",
-                      borderColor: "var(--border)",
-                      color: "var(--foreground)",
-                    }}
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-xs font-medium mb-1.5" style={{ color: "var(--text-muted)" }}>
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  name="subject"
-                  required
-                  placeholder="Project Opportunity"
-                  className="w-full px-3 py-2.5 rounded-lg text-sm outline-none border transition-colors focus:border-indigo-500"
-                  style={{
-                    background: "var(--surface)",
-                    borderColor: "var(--border)",
-                    color: "var(--foreground)",
-                  }}
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-medium mb-1.5" style={{ color: "var(--text-muted)" }}>
-                  Message
-                </label>
-                <textarea
-                  name="body"
-                  required
-                  rows={5}
-                  placeholder="Tell me about your project..."
-                  className="w-full px-3 py-2.5 rounded-lg text-sm outline-none border transition-colors focus:border-indigo-500 resize-none"
-                  style={{
-                    background: "var(--surface)",
-                    borderColor: "var(--border)",
-                    color: "var(--foreground)",
-                  }}
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-semibold text-white transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
-                style={{ background: "linear-gradient(135deg, var(--primary), var(--secondary))" }}
-              >
-                <Send className="w-4 h-4" />
-                Send Message
-              </button>
-            </form>
+            ...form fields...
           </div>
+          */}
         </div>
       </div>
     </section>

@@ -6,56 +6,56 @@ const certifications = [
     issuer: "Amazon Web Services (Credly)",
     category: "Cloud",
     color: "#f59e0b",
-    link: "#",
+    link: "https://www.credly.com/users/awais-nasir.104ea20a/",
   },
   {
     title: "AWS Cloud Practitioner Essentials",
     issuer: "AWS SkillBuilder",
     category: "Cloud",
     color: "#f59e0b",
-    link: "#",
+    link: null,
   },
   {
     title: "AWS Cloud Quest: Practitioner",
     issuer: "AWS SkillBuilder",
     category: "Cloud",
     color: "#f59e0b",
-    link: "#",
+    link: null,
   },
   {
     title: "NestJS Developer",
     issuer: "Udemy",
     category: "Backend",
     color: "#6366f1",
-    link: "#",
+    link: null,
   },
   {
     title: "Ionic Developer",
     issuer: "Udemy",
     category: "Mobile",
     color: "#10b981",
-    link: "#",
+    link: null,
   },
   {
     title: "AngularJS / Angular Developer",
     issuer: "Udemy",
     category: "Frontend",
     color: "#06b6d4",
-    link: "#",
+    link: null,
   },
   {
     title: "Certified JavaScript Developer",
     issuer: "Udemy",
     category: "Frontend",
     color: "#06b6d4",
-    link: "#",
+    link: null,
   },
   {
     title: "WCAG Principles & Compliance",
     issuer: "Udemy",
     category: "Accessibility",
     color: "#8b5cf6",
-    link: "#",
+    link: null,
   },
 ];
 
@@ -145,17 +145,19 @@ export default function Certifications() {
                 </p>
               </div>
 
-              {/* Link */}
-              <a
-                href={cert.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto flex items-center gap-1 text-xs font-medium transition-colors opacity-0 group-hover:opacity-100"
-                style={{ color: cert.color }}
-              >
-                View Certificate
-                <ExternalLink className="w-3 h-3" />
-              </a>
+              {/* Link — only shown when a valid URL is available */}
+              {cert.link && (
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto flex items-center gap-1 text-xs font-medium transition-colors opacity-0 group-hover:opacity-100"
+                  style={{ color: cert.color }}
+                >
+                  View Certificate
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              )}
             </div>
           ))}
         </div>
