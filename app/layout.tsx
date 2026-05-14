@@ -28,7 +28,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="min-h-screen" style={{ background: "var(--background)", color: "var(--foreground)" }}>
+      <body suppressHydrationWarning className="min-h-screen" style={{ background: "var(--background)", color: "var(--foreground)" }}>
         <Navbar />
         {children}
       </body>
