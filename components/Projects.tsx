@@ -4,6 +4,7 @@ const projects = [
   {
     title: "Agentic Job Ingestion Tool",
     type: "Personal Project",
+    url: null,
     description:
       "Built a robust AI operator to solve the 'fragmented job market' problem in the Global South. Implements intelligent data schemas to align scraped LLM outputs with structured business requirements, resolving complex schema mismatches. Includes automated scheduling for hands-off operation.",
     tags: ["LangChain", "Python", "Tavily", "Google Sheets API", "AI Agents"],
@@ -17,6 +18,7 @@ const projects = [
   {
     title: "QC+ Memberships Platform",
     type: "Enterprise",
+    url: "https://members.qacreates.com/en",
     description:
       "Centralized Memberships Platform for QC+ and Qatar Museums, migrating 100K+ members from legacy systems. Fully digitized corporate, individual, and event-based memberships with QNB payment integrations.",
     tags: ["Next.js", "NestJS", "Hasura GraphQL", "Azure PostgreSQL", "QNB Payments"],
@@ -31,6 +33,7 @@ const projects = [
   {
     title: "Afiniti Performance Reporting + AI Chatbot",
     type: "Enterprise",
+    url: "https://portal.afiniti.com/",
     description:
       "Reporting platform providing senior management insights into product performance across client environments. Features an AI-powered chatbot enabling stakeholders to query performance data conversationally using OpenAI + LangChain + pgvector.",
     tags: ["Next.js", "Node.js", "OpenAI", "LangChain", "pgvector", "PostgreSQL"],
@@ -45,6 +48,7 @@ const projects = [
   {
     title: "Visenya — AI Data Pipeline Platform",
     type: "Enterprise",
+    url: null,
     description:
       "Platform to automate data pipelines for AI and data integration teams at Afiniti. Built a wrapper around Apache Airflow to simplify task automation and improve workflow management, integrating with AI teams daily.",
     tags: ["Node.js", "Next.js", "Python", "Apache Airflow", "PostgreSQL", "Apache Cassandra"],
@@ -58,6 +62,7 @@ const projects = [
   {
     title: "Daleel Aqar — Real Estate Platform",
     type: "Enterprise",
+    url: "https://www.daleelaqar.com/#/nav/home",
     description:
       "Large-scale real estate platform enabling property buying, selling, and rentals. Led end-to-end technical consulting across planning, architecture, and deployment. WCAG-compliant and certified by levelaccess.",
     tags: ["Angular", "NestJS", "GraphQL", "PostgreSQL", "AWS", "Nx.dev", "WCAG"],
@@ -72,6 +77,7 @@ const projects = [
   {
     title: "WFM SaaS — Workforce Management",
     type: "Enterprise",
+    url: null,
     description:
       "Scalable, tenant-based SaaS for contact center workforce management. Supports agent scheduling, time-off requests, forecasting, and real-time reporting with Keycloak RBAC and multi-timezone support.",
     tags: ["Node.js", "NestJS", "Keycloak", "PostgreSQL", "RBAC", "Multi-tenant"],
@@ -86,6 +92,7 @@ const projects = [
   {
     title: "Omni Central — Omnichannel Communication",
     type: "Product",
+    url: null,
     description:
       "All-in-one platform for multi-channel customer communication including SMS, WhatsApp, email, and live chat. Incorporates CRM, inbox management, directories, and spreadsheet features.",
     tags: ["Angular 2+", "Node.js", "NestJS", "GraphQL", "WebSocket"],
@@ -99,6 +106,7 @@ const projects = [
   {
     title: "Aduro — IoT Hardware Controller App",
     type: "Mobile App",
+    url: "https://play.google.com/store/apps/details?id=com.nbe.android.adurohybrid1&hl=en",
     description:
       "Hybrid mobile app using Ionic to interface with hardware controllers, enabling remote management of DHW systems, hoppers, and boilers. Upgraded from Ionic 1 to Ionic 4 for improved performance.",
     tags: ["Ionic", "Capacitor", "TypeScript", "IoT", "Mobile"],
@@ -108,10 +116,6 @@ const projects = [
       "Upgraded from Ionic 1 to Ionic 4",
       "Published on iOS App Store and Google Play",
     ],
-    links: {
-      appStore: "#",
-      playStore: "#",
-    },
   },
 ];
 
@@ -163,11 +167,29 @@ export default function Projects() {
                     {project.title}
                   </h3>
                 </div>
-                <div
-                  className="p-2 rounded-lg shrink-0"
-                  style={{ background: `${project.color}15` }}
-                >
-                  <Rocket className="w-4 h-4" style={{ color: project.color }} />
+                <div className="flex items-center gap-2 shrink-0">
+                  {project.url && (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition-all duration-200 hover:scale-105"
+                      style={{
+                        background: `${project.color}12`,
+                        borderColor: `${project.color}30`,
+                        color: project.color,
+                      }}
+                    >
+                      <ExternalLink className="w-3 h-3" />
+                      Visit
+                    </a>
+                  )}
+                  <div
+                    className="p-2 rounded-lg"
+                    style={{ background: `${project.color}15` }}
+                  >
+                    <Rocket className="w-4 h-4" style={{ color: project.color }} />
+                  </div>
                 </div>
               </div>
 
