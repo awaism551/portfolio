@@ -2,12 +2,15 @@
 
 import { useEffect, useState } from "react";
 import { MapPin, Mail, Phone, GitFork, Link, ExternalLink, ChevronDown } from "lucide-react";
+import portfolio from "@/data/portfolio.json";
 
-const roles = [
-  "Senior Software Engineer",
-  "Full Stack Architect",
-  "AI-Native Developer",
-];
+const { personal } = portfolio;
+
+const iconMap: Record<string, React.ElementType> = {
+  GitFork,
+  Link,
+  ExternalLink,
+};
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -15,7 +18,7 @@ export default function Hero() {
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const current = roles[roleIndex];
+    const current = personal.roles[roleIndex];
     let timeout: ReturnType<typeof setTimeout>;
 
     if (!deleting && displayed.length < current.length) {
@@ -26,7 +29,7 @@ export default function Hero() {
       timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 35);
     } else if (deleting && displayed.length === 0) {
       setDeleting(false);
-      setRoleIndex((i) => (i + 1) % roles.length);
+      setRoleIndex((i) => (i + 1) % personal.roles.length);
     }
 
     return () => clearTimeout(timeout);
@@ -48,33 +51,25 @@ export default function Hero() {
       />
 
       {/* Glow orbs */}
-      <div
-        className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full blur-3xl opacity-10 float"
-        style={{ background: "var(--primary)" }}
-      />
-      <div
-        className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full blur-3xl opacity-10"
-        style={{ background: "var(--secondary)", animationDelay: "2s" }}
-      />
+      <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full blur-3xl opacity-10 float" style={{ background: "var(--primary)" }} />
+      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full blur-3xl opacity-10" style={{ background: "var(--secondary)" }} />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         {/* Badge */}
-        <div
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium mb-8 border"
-          style={{
-            background: "rgba(99,102,241,0.1)",
-            borderColor: "rgba(99,102,241,0.3)",
-            color: "var(--primary-light)",
-          }}
-        >
-          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-          Available for opportunities
-        </div>
+        {personal.availableForWork && (
+          <div
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium mb-8 border"
+            style={{ background: "rgba(99,102,241,0.1)", borderColor: "rgba(99,102,241,0.3)", color: "var(--primary-light)" }}
+          >
+            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+            {personal.availabilityLabel}
+          </div>
+        )}
 
         {/* Name */}
         <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
           <span style={{ color: "var(--foreground)" }}>Hi, I&apos;m </span>
-          <span className="gradient-text">Awais Nasir</span>
+          <span className="gradient-text">{personal.name}</span>
         </h1>
 
         {/* Typewriter */}
@@ -86,31 +81,23 @@ export default function Hero() {
         </div>
 
         {/* Summary */}
-        <p
-          className="text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed"
-          style={{ color: "var(--text-muted)" }}
-        >
-          Software Engineer &amp; Full Stack Architect with a focus on building{" "}
-          <span style={{ color: "var(--secondary)" }}>secure, scalable, resilient</span>,
-          high-performing and cost-effective software solutions.
+        <p className="text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed" style={{ color: "var(--text-muted)" }}>
+          {personal.description}
         </p>
 
         {/* Meta */}
-        <div
-          className="flex flex-wrap items-center justify-center gap-4 mb-10 text-sm"
-          style={{ color: "var(--text-muted)" }}
-        >
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-10 text-sm" style={{ color: "var(--text-muted)" }}>
           <span className="flex items-center gap-1">
             <MapPin className="w-4 h-4" style={{ color: "var(--accent)" }} />
-            Doha, Qatar
+            {personal.location}
           </span>
           <span className="flex items-center gap-1">
             <Phone className="w-4 h-4" style={{ color: "var(--accent)" }} />
-            +974 72249657
+            {personal.phone}
           </span>
           <span className="flex items-center gap-1">
             <Mail className="w-4 h-4" style={{ color: "var(--accent)" }} />
-            awaism551@gmail.com
+            {personal.email}
           </span>
         </div>
 
@@ -126,11 +113,7 @@ export default function Hero() {
           <a
             href="#contact"
             className="px-6 py-3 rounded-xl font-semibold border transition-all duration-200 hover:scale-105"
-            style={{
-              borderColor: "var(--border)",
-              color: "var(--foreground)",
-              background: "var(--surface)",
-            }}
+            style={{ borderColor: "var(--border)", color: "var(--foreground)", background: "var(--surface)" }}
           >
             Get In Touch
           </a>
@@ -138,27 +121,22 @@ export default function Hero() {
 
         {/* Social links */}
         <div className="flex items-center justify-center gap-4">
-          {[
-            { href: "https://github.com/awaism551", label: "GitHub", icon: GitFork },
-            { href: "https://www.linkedin.com/in/awais-nasir-dev/", label: "LinkedIn", icon: Link },
-            { href: "https://stackoverflow.com/users/5568646/muhammad-awais", label: "StackOverflow", icon: ExternalLink },
-          ].map(({ href, label, icon: Icon }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              className="p-3 rounded-xl border transition-all duration-200 hover:scale-110"
-              style={{
-                borderColor: "var(--border)",
-                background: "var(--surface)",
-                color: "var(--text-muted)",
-              }}
-            >
-              <Icon className="w-5 h-5" />
-            </a>
-          ))}
+          {personal.socials.map(({ href, label, icon }) => {
+            const Icon = iconMap[icon] ?? ExternalLink;
+            return (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="p-3 rounded-xl border transition-all duration-200 hover:scale-110"
+                style={{ borderColor: "var(--border)", background: "var(--surface)", color: "var(--text-muted)" }}
+              >
+                <Icon className="w-5 h-5" />
+              </a>
+            );
+          })}
         </div>
       </div>
 

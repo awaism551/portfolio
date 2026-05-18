@@ -1,123 +1,7 @@
 import { Rocket, ExternalLink, Tag } from "lucide-react";
+import portfolio from "@/data/portfolio.json";
 
-const projects = [
-  {
-    title: "Agentic Job Ingestion Tool",
-    type: "Personal Project",
-    url: null,
-    description:
-      "Built a robust AI operator to solve the 'fragmented job market' problem in the Global South. Implements intelligent data schemas to align scraped LLM outputs with structured business requirements, resolving complex schema mismatches. Includes automated scheduling for hands-off operation.",
-    tags: ["LangChain", "Python", "Tavily", "Google Sheets API", "AI Agents"],
-    color: "#f59e0b",
-    highlights: [
-      "Automated job scraping and ingestion using LangChain agents",
-      "Schema alignment between LLM outputs and structured business data",
-      "Fully automated scheduling for zero-touch operation",
-    ],
-  },
-  {
-    title: "QC+ Memberships Platform",
-    type: "Enterprise",
-    url: "https://members.qacreates.com/en",
-    description:
-      "Centralized Memberships Platform for QC+ and Qatar Museums, migrating 100K+ members from legacy systems. Fully digitized corporate, individual, and event-based memberships with QNB payment integrations.",
-    tags: ["Next.js", "NestJS", "Hasura GraphQL", "Azure PostgreSQL", "QNB Payments"],
-    color: "#6366f1",
-    highlights: [
-      "100K+ member migration from legacy systems",
-      "RBAC-driven admin workflows and membership approvals",
-      "Integrated QNB payment gateway",
-      "Core system for Qatar Museums cultural event monetization",
-    ],
-  },
-  {
-    title: "Afiniti Performance Reporting + AI Chatbot",
-    type: "Enterprise",
-    url: "https://portal.afiniti.com/",
-    description:
-      "Reporting platform providing senior management insights into product performance across client environments. Features an AI-powered chatbot enabling stakeholders to query performance data conversationally using OpenAI + LangChain + pgvector.",
-    tags: ["Next.js", "Node.js", "OpenAI", "LangChain", "pgvector", "PostgreSQL"],
-    color: "#06b6d4",
-    highlights: [
-      "AI chatbot with semantic search over performance data",
-      "OpenAI APIs + LangChain + PostgreSQL pgvector integration",
-      "Deployed to portal.afiniti.com for global stakeholders",
-      "Real-time dashboard with visual analytics",
-    ],
-  },
-  {
-    title: "Visenya — AI Data Pipeline Platform",
-    type: "Enterprise",
-    url: null,
-    description:
-      "Platform to automate data pipelines for AI and data integration teams at Afiniti. Built a wrapper around Apache Airflow to simplify task automation and improve workflow management, integrating with AI teams daily.",
-    tags: ["Node.js", "Next.js", "Python", "Apache Airflow", "PostgreSQL", "Apache Cassandra"],
-    color: "#8b5cf6",
-    highlights: [
-      "Airflow wrapper for simplified task automation",
-      "Daily collaboration with AI research teams",
-      "Automated data pipeline orchestration",
-    ],
-  },
-  {
-    title: "Daleel Aqar — Real Estate Platform",
-    type: "Enterprise",
-    url: "https://www.daleelaqar.com/#/nav/home",
-    description:
-      "Large-scale real estate platform enabling property buying, selling, and rentals. Led end-to-end technical consulting across planning, architecture, and deployment. WCAG-compliant and certified by levelaccess.",
-    tags: ["Angular", "NestJS", "GraphQL", "PostgreSQL", "AWS", "Nx.dev", "WCAG"],
-    color: "#10b981",
-    highlights: [
-      "WCAG certified by levelaccess",
-      "Nx.dev monorepo architecture",
-      "AWS DevOps: Docker, Bitbucket Pipelines, IAM, monitoring",
-      "Full property lifecycle: listings, search, and transactions",
-    ],
-  },
-  {
-    title: "WFM SaaS — Workforce Management",
-    type: "Enterprise",
-    url: null,
-    description:
-      "Scalable, tenant-based SaaS for contact center workforce management. Supports agent scheduling, time-off requests, forecasting, and real-time reporting with Keycloak RBAC and multi-timezone support.",
-    tags: ["Node.js", "NestJS", "Keycloak", "PostgreSQL", "RBAC", "Multi-tenant"],
-    color: "#ef4444",
-    highlights: [
-      "Multi-tenant SaaS architecture",
-      "Keycloak RBAC with timezone-aware scheduling",
-      "Statistical forecasting for agent workforce planning",
-      "Live and historical reports for strategic insights",
-    ],
-  },
-  {
-    title: "Omni Central — Omnichannel Communication",
-    type: "Product",
-    url: null,
-    description:
-      "All-in-one platform for multi-channel customer communication including SMS, WhatsApp, email, and live chat. Incorporates CRM, inbox management, directories, and spreadsheet features.",
-    tags: ["Angular 2+", "Node.js", "NestJS", "GraphQL", "WebSocket"],
-    color: "#f59e0b",
-    highlights: [
-      "Multi-channel: SMS, WhatsApp, Email, Live Chat",
-      "CRM and inbox management modules",
-      "Real-time communication with WebSocket",
-    ],
-  },
-  {
-    title: "Aduro — IoT Hardware Controller App",
-    type: "Mobile App",
-    url: "https://play.google.com/store/apps/details?id=com.nbe.android.adurohybrid1&hl=en",
-    description:
-      "Hybrid mobile app using Ionic to interface with hardware controllers, enabling remote management of DHW systems, hoppers, and boilers. Upgraded from Ionic 1 to Ionic 4 for improved performance.",
-    tags: ["Ionic", "Capacitor", "TypeScript", "IoT", "Mobile"],
-    color: "#06b6d4",
-    highlights: [
-      "Remote management of heating hardware devices",
-      "Upgraded from Ionic 1 to Ionic 4",
-      "Published on iOS App Store and Google Play",
-    ],
-  },
-];
+const { projects } = portfolio;
 
 export default function Projects() {
   return (
@@ -127,11 +11,7 @@ export default function Projects() {
         <div className="text-center mb-16">
           <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium mb-4 border"
-            style={{
-              background: "rgba(245,158,11,0.08)",
-              borderColor: "rgba(245,158,11,0.25)",
-              color: "var(--accent)",
-            }}
+            style={{ background: "rgba(245,158,11,0.08)", borderColor: "rgba(245,158,11,0.25)", color: "var(--accent)" }}
           >
             <Rocket className="w-3.5 h-3.5" />
             Projects
@@ -163,9 +43,7 @@ export default function Projects() {
                       {project.type}
                     </span>
                   </div>
-                  <h3 className="text-base font-bold" style={{ color: "var(--foreground)" }}>
-                    {project.title}
-                  </h3>
+                  <h3 className="text-base font-bold" style={{ color: "var(--foreground)" }}>{project.title}</h3>
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
                   {project.url && (
@@ -174,20 +52,13 @@ export default function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition-all duration-200 hover:scale-105"
-                      style={{
-                        background: `${project.color}12`,
-                        borderColor: `${project.color}30`,
-                        color: project.color,
-                      }}
+                      style={{ background: `${project.color}12`, borderColor: `${project.color}30`, color: project.color }}
                     >
                       <ExternalLink className="w-3 h-3" />
                       Visit
                     </a>
                   )}
-                  <div
-                    className="p-2 rounded-lg"
-                    style={{ background: `${project.color}15` }}
-                  >
+                  <div className="p-2 rounded-lg" style={{ background: `${project.color}15` }}>
                     <Rocket className="w-4 h-4" style={{ color: project.color }} />
                   </div>
                 </div>
@@ -214,11 +85,7 @@ export default function Projects() {
                   <span
                     key={tag}
                     className="flex items-center gap-1 px-2 py-0.5 rounded-md text-xs border"
-                    style={{
-                      background: "rgba(255,255,255,0.04)",
-                      borderColor: "var(--border)",
-                      color: "var(--text-muted)",
-                    }}
+                    style={{ background: "rgba(255,255,255,0.04)", borderColor: "var(--border)", color: "var(--text-muted)" }}
                   >
                     <Tag className="w-2.5 h-2.5" />
                     {tag}
