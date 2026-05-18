@@ -19,7 +19,9 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
       "Bash(node -e \"const l = require\\('lucide-react'\\); console.log\\('Youtube' in l\\)\")",
-      "Bash(node -e \"const l = require\\('lucide-react'\\); console.log\\(Object.keys\\(l\\).filter\\(k => k.toLowerCase\\(\\).includes\\('you'\\) || k.toLowerCase\\(\\).includes\\('video'\\) || k.toLowerCase\\(\\).includes\\('play'\\)\\)\\)\")"
+      "Bash(node -e \"const l = require\\('lucide-react'\\); console.log\\(Object.keys\\(l\\).filter\\(k => k.toLowerCase\\(\\).includes\\('you'\\) || k.toLowerCase\\(\\).includes\\('video'\\) || k.toLowerCase\\(\\).includes\\('play'\\)\\)\\)\")",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); const icons = ['CloudCog', 'FileCode', 'Terminal', 'Repeat', 'Network', 'Waypoints', 'Layout', 'Users']; icons.forEach\\(i => console.log\\(i, !!l[i]\\)\\);\")",
+      "Bash(node -e ' *)"
     ]
   }
 }

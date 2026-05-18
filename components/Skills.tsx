@@ -1,6 +1,7 @@
 import {
   Cpu, Globe, Server, Database, Cloud, Shield,
   GitBranch, Wrench, Layers, Zap, Smartphone, TestTube,
+  CloudCog, FileCode, Terminal, Repeat, Network, Waypoints, Layout, Users,
 } from "lucide-react";
 import portfolio from "@/data/portfolio.json";
 
@@ -9,6 +10,7 @@ const { skills: skillGroups } = portfolio;
 const iconMap: Record<string, React.ElementType> = {
   Cpu, Globe, Server, Database, Cloud, Shield,
   GitBranch, Wrench, Layers, Zap, Smartphone, TestTube,
+  CloudCog, FileCode, Terminal, Repeat, Network, Waypoints, Layout, Users,
 };
 
 export default function Skills() {
