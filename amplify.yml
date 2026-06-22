@@ -1,0 +1,39 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - node --version
+        - npm --version
+        - npm ci
+    build:
+      commands:
+        - export NODE_OPTIONS="--max_old_space_size=4096"
+        # Browser-exposed vars (optional)
+        - env | grep -E '^NEXT_PUBLIC_' >> .env.production || true
+        - env | grep -E '^REACT_APP_' >> .env.production || true
+        # Server-side API secrets — must be written before `next build`
+        - echo "ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY" >> .env.production
+        - echo "CLAUDE_API_KEY=$CLAUDE_API_KEY" >> .env.production
+        - echo "CLAUDE_MODEL=$CLAUDE_MODEL" >> .env.production
+        # Safe build-time check (never prints the secret value)
+        - |
+          if [ -n "$ANTHROPIC_API_KEY" ] || [ -n "$CLAUDE_API_KEY" ]; then
+            echo "Claude API key is present at build time"
+          else
+            echo "WARNING: ANTHROPIC_API_KEY and CLAUDE_API_KEY are both empty — chatbot will fail in production"
+          fi
+        - npm run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules/**/*
+      - .next/cache/**/*
+  customHeaders:
+    - pattern: "**/*"
+      headers:
+        - key: "Cache-Control"
+          value: "public, max-age=0, must-revalidate"

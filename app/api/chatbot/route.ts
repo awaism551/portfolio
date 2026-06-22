@@ -3,6 +3,7 @@ import { buildPortfolioContext } from "@/lib/portfolio-context";
 import { parseChatPayload } from "@/lib/format-chat-response";
 
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 type ChatMessage = {
   role: "user" | "assistant";
@@ -37,7 +38,8 @@ Format exactly:
 The suggestions must be natural next questions a recruiter or hiring manager might ask, based on what you just answered. Each suggestion must be under 60 characters.`;
 
 function getApiKey(): string | undefined {
-  return process.env.ANTHROPIC_API_KEY ?? process.env.CLAUDE_API_KEY;
+  // Bracket access avoids build-time inlining on some serverless hosts (e.g. Amplify)
+  return process.env["ANTHROPIC_API_KEY"] ?? process.env["CLAUDE_API_KEY"];
 }
 
 export async function POST(req: NextRequest) {
