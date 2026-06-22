@@ -69,7 +69,10 @@ export default function Certifications() {
                 <h3 className="text-sm font-semibold leading-snug mb-1" style={{ color: "var(--foreground)" }}>
                   {cert.title}
                 </h3>
-                <p className="text-xs" style={{ color: "var(--text-muted)" }}>{cert.issuer}</p>
+                <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+                  {cert.issuer}
+                  {"status" in cert && cert.status ? ` · ${cert.status}` : ""}
+                </p>
               </div>
 
               {cert.link && (
@@ -80,7 +83,7 @@ export default function Certifications() {
                   className="mt-auto flex items-center gap-1 text-xs font-medium transition-colors opacity-0 group-hover:opacity-100"
                   style={{ color: cert.color }}
                 >
-                  View Certificate
+                  {"linkLabel" in cert && cert.linkLabel ? cert.linkLabel : "View Certificate"}
                   <ExternalLink className="w-3 h-3" />
                 </a>
               )}

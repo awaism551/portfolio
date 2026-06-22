@@ -60,7 +60,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href={`mailto:${personal.email}`}
+            href="#contact"
             className="ml-4 px-4 py-2 rounded-lg text-sm font-semibold text-white transition-all duration-200 hover:opacity-90"
             style={{ background: "var(--primary)" }}
           >
@@ -94,7 +94,8 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href={`mailto:${personal.email}`}
+            href="#contact"
+            onClick={() => setOpen(false)}
             className="mt-2 px-4 py-2 rounded-lg text-sm font-semibold text-white text-center"
             style={{ background: "var(--primary)" }}
           >

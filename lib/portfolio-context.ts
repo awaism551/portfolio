@@ -20,8 +20,16 @@ ${highlights}`;
   const projectLines = projects
     .map((p) => {
       const highlights = p.highlights.map((h) => `    • ${h}`).join("\n");
-      const url = p.url ? ` URL: ${p.url}` : "";
-      return `- ${p.title} [${p.type}]${url}
+      const urls = [
+        p.url ? `Live: ${p.url}` : null,
+        "links" in p && Array.isArray(p.links)
+          ? p.links.map((l: { label: string; href: string }) => `${l.label}: ${l.href}`).join(" | ")
+          : null,
+      ]
+        .filter(Boolean)
+        .join(" | ");
+      const urlLine = urls ? ` Links: ${urls}` : "";
+      return `- ${p.title} [${p.type}]${urlLine}
   ${p.description}
   Tags: ${p.tags.join(", ")}
 ${highlights}`;
@@ -29,7 +37,11 @@ ${highlights}`;
     .join("\n\n");
 
   const certLines = certifications
-    .map((c) => `- ${c.title} (${c.issuer}, ${c.category})`)
+    .map((c) => {
+      const link = c.link ? ` — ${c.link}` : "";
+      const status = "status" in c && c.status ? ` (${c.status})` : "";
+      return `- ${c.title} (${c.issuer}, ${c.category})${status}${link}`;
+    })
     .join("\n");
 
   return `

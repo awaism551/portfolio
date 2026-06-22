@@ -31,23 +31,11 @@ export default function About() {
               className="p-6 rounded-2xl border space-y-4 card-glow"
               style={{ background: "var(--surface-2)", borderColor: "var(--border)" }}
             >
-              {/* Paragraph 1 */}
-              <p className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                I am a <span style={{ color: "var(--foreground)", fontWeight: 600 }}>Senior Software Engineer</span>{" "}
-                with <span style={{ color: "var(--secondary)" }}>8+ years of experience</span> delivering
-                production-grade platforms across startups, product companies, and enterprise environments.
-                My work spans backend architecture, cloud infrastructure, AI-integrated systems, and full-stack
-                product delivery, always with a focus on systems that are reliable, scalable, and built to last.
-              </p>
-
-              {/* Paragraph 2 */}
-              <p className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                Over the years I have worked across industries including AI, workforce management, real estate,
-                media, and cultural institutions, contributing to platforms that serve{" "}
-                <span style={{ color: "var(--primary-light)" }}>hundreds of thousands of users globally</span>.
-                I have led projects end-to-end: from early architecture decisions and team alignment through
-                to production deployment and post-launch operations.
-              </p>
+              {about.bioParagraphs.map((paragraph) => (
+                <p key={paragraph} className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                  {paragraph}
+                </p>
+              ))}
 
               {/* Principles */}
               <div className="space-y-2 pt-1">

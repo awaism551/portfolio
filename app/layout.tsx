@@ -8,9 +8,9 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Awais Nasir | Senior Software Engineer",
+  title: "Awais Nasir | Software Engineer & Full Stack Architect",
   description:
-    "Portfolio of Awais Nasir — Senior Software Engineer, AI-Native Developer & Automation Engineer specializing in LangChain, Next.js, NestJS, and cloud-native systems.",
+    "Portfolio of Awais Nasir — Software Engineer & Full Stack Architect specializing in AI-integrated systems, LangChain, Next.js, NestJS, Azure, AWS, and cloud-native solutions. Based in Doha, Qatar.",
   keywords: [
     "Awais Nasir",
     "Software Engineer",

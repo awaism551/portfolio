@@ -8,33 +8,39 @@
     "availabilityLabel": "Available for opportunities",
     "description": "Software Engineer & Full Stack Architect with a focus on building secure, scalable, resilient, high-performing and cost-effective software solutions.",
     "roles": [
-      "Senior Software Engineer",
+      "Software Engineer",
       "Full Stack Architect",
-      "AI-Native Developer"
+      "Senior Web Developer",
+      "Sr AI Engineer"
     ],
     "socials": [
-      { "label": "GitHub",        "href": "https://github.com/awaism551",                                   "icon": "GitFork"     },
-      { "label": "LinkedIn",      "href": "https://www.linkedin.com/in/awais-nasir-dev/",                   "icon": "Link"        },
-      { "label": "StackOverflow", "href": "https://stackoverflow.com/users/5568646/muhammad-awais",         "icon": "ExternalLink"}
+      { "label": "GitHub",        "href": "https://github.com/awaism551",                           "icon": "GitFork"     },
+      { "label": "LinkedIn",      "href": "https://www.linkedin.com/in/awais-nasir-dev/",           "icon": "Link"        },
+      { "label": "StackOverflow", "href": "https://stackoverflow.com/users/5568646/muhammad-awais", "icon": "ExternalLink"}
     ]
   },
 
   "about": {
     "sectionLabel": "About Me",
     "heading": "Who I Am",
-    "subtitle": "Building systems that scale — reliably, securely, and built to last.",
+    "subtitle": "Solving real-world problems with technology — from architecture to production.",
     "principlesHeading": "What defines my approach:",
+    "bioParagraphs": [
+      "I am a Software Engineer with practical experience focusing on solving real-world problems using technology, with 8+ years delivering production-grade platforms across startups, product companies, and enterprise environments.",
+      "As a Full Stack Architect, I build secure, scalable, resilient, high-performing and cost-effective software solutions — spanning backend architecture, cloud infrastructure, AI-integrated systems, and end-to-end product delivery.",
+      "I have a proven track record of collaborating closely with AI researchers and data engineers to translate advanced analytical models and unstructured data workflows into production-ready enterprise applications."
+    ],
     "principles": [
-      "I architect for the long term, not just the deadline",
-      "I take ownership of the full lifecycle, not just my slice of it",
-      "I bridge the gap between technical depth and business outcomes",
-      "I mentor teams and raise engineering standards, not just ship features"
+      "Practical focus on solving real-world problems with the right technology",
+      "Architect for security, scalability, resilience, and long-term maintainability",
+      "Bridge AI research, data engineering, and production software delivery",
+      "Lead with ownership — from system design and team alignment through deployment and operations"
     ],
     "stats": [
       { "label": "Years Experience", "value": "8+" },
       { "label": "Companies",        "value": "7"  },
       { "label": "Projects Shipped", "value": "20+" },
-      { "label": "Certifications",   "value": "8"  }
+      { "label": "Certifications",   "value": "11" }
     ],
     "education": [
       {
@@ -57,13 +63,13 @@
       "category": "Front End",
       "icon": "Globe",
       "color": "#06b6d4",
-      "skills": ["React.js", "Next.js", "Angular 2+", "AngularJS", "TypeScript", "JavaScript ES6", "JavaScript ES5", "HTML5", "Apollo Angular", "Backbone.js", "jQuery"]
+      "skills": ["React.js", "Next.js", "React", "Angular 2+", "AngularJS", "Apollo Angular"]
     },
     {
       "category": "Back End",
       "icon": "Server",
       "color": "#6366f1",
-      "skills": ["Node.js", "NestJS", "Express.js", "Firebase", "C#", "Python", "Flask", "Django"]
+      "skills": ["Node.js", "NestJS", "Firebase", "Express.js", "C#", "Python", "Flask", "Django"]
     },
     {
       "category": "UI Skills",
@@ -75,13 +81,19 @@
       "category": "Databases",
       "icon": "Database",
       "color": "#8b5cf6",
-      "skills": ["SQL", "PostgreSQL", "MySQL", "MongoDB", "MariaDB", "Firebase Realtime DB", "Firebase Cloud Firestore", "Greenplum", "AWS RDS", "AWS DynamoDB", "Apache Cassandra"]
+      "skills": ["SQL", "PostgreSQL", "Firebase Realtime DB", "MySQL", "Firebase Cloud Firestore", "MariaDB", "MongoDB", "Greenplum", "AWS RDS", "AWS DynamoDB", "Apache Cassandra"]
     },
     {
-      "category": "AI Dev Tools",
+      "category": "AI Engineering & Tools",
       "icon": "Cpu",
       "color": "#f59e0b",
-      "skills": ["LangChain", "pgvector"]
+      "skills": ["LangChain", "pgvector", "OpenAI APIs", "Claude Code", "Codex", "Cursor", "Antigravity"]
+    },
+    {
+      "category": "Event Driven Systems",
+      "icon": "GitBranch",
+      "color": "#ef4444",
+      "skills": ["Redis", "Kafka", "AWS SQS", "Azure Service Bus"]
     },
     {
       "category": "Cloud",
@@ -93,7 +105,7 @@
       "category": "Azure",
       "icon": "CloudCog",
       "color": "#0ea5e9",
-      "skills": ["Azure VM", "Azure Blob Storage", "Azure SQL", "Azure AD"]
+      "skills": ["Azure VM", "Azure Blob Storage", "Azure SQL", "Azure AD (Entra)", "Key Vault", "Container Apps", "Front Door", "Azure DevOps", "Foundry IQ"]
     },
     {
       "category": "Headless CMS",
@@ -171,21 +183,22 @@
       "category": "Soft Skills",
       "icon": "Users",
       "color": "#ec4899",
-      "skills": ["Technical Decision Making", "Trade-off Analysis", "Architecture Diagrams", "Cross-Team Collaboration", "Technical Presentation", "Mentoring Juniors"]
+      "skills": ["Leadership", "Technical Decision Making", "Trade-off Analysis", "Architecture Diagrams", "Cross-Team Collaboration", "Technical Presentation", "Mentoring Juniors"]
     }
   ],
 
   "experience": [
     {
-      "company": "QC+ | Qatar Museums",
+      "company": "Qatar Museums | Memberships Portal",
       "role": "Senior Web Developer",
       "location": "Doha, Qatar",
       "period": "Sep 2025 – Mar 2026",
-      "tags": ["Next.js", "NestJS", "Hasura GraphQL", "Azure PostgreSQL", "QNB Payments"],
+      "tags": ["Next.js", "NestJS", "Hasura GraphQL", "Azure PostgreSQL", "Azure Data Factory", "QNB Payments", "MS Foundry IQ", "pgvector", "AI Chatbot"],
       "highlights": [
-        "Led the architecture and delivery of a centralized Memberships Platform for QC+ and Qatar Museums, migrating 100K+ members from legacy systems and fully digitizing corporate, individual, and event-based memberships.",
-        "Unified RBAC-driven admin workflows, membership approvals, ticketing, and QNB payment integrations — now the core system for cultural event access and monetization across all museums.",
-        "Led end-to-end system design discussions, collaborating with infrastructure, security, and operations teams."
+        "Led architecture and delivery of a centralized Memberships Platform for QC+ and Qatar Museums, migrating 100K+ members from legacy systems using Azure Data Factory and fully digitizing corporate, individual, and event-based memberships.",
+        "Built the platform on Next.js, NestJS, Hasura GraphQL, and Azure PostgreSQL with RBAC-driven admin workflows, membership approvals, ticketing, and QNB payment integrations — now the core system for cultural event access and monetization across all museums.",
+        "Designed and deployed an AI-powered chatbot assistant enabling members to query events data and membership info conversationally, using MS Foundry IQ, custom Python orchestration, SLM for prompt intent, and pgvector embeddings.",
+        "Led end-to-end system design discussions, collaborating with infrastructure, security, operations, and memberships teams."
       ]
     },
     {
@@ -195,9 +208,8 @@
       "period": "Feb 2025 – Aug 2025",
       "tags": ["Angular", "NestJS", "GraphQL", "PostgreSQL", "AWS", "Nx.dev", "WCAG"],
       "highlights": [
-        "Delivered end-to-end technical functionalities across planning, architecture, and deployment for Daleel Aqar, a large-scale real estate platform enabling property buying, selling, and rentals.",
-        "Architected app fully compliant with WCAG guidelines to achieve the official LevelAccess certification.",
-        "Structured within an Nx.dev monorepo to ensure scalability, maintainability, and rapid team onboarding.",
+        "Delivered key architectural guidance and end-to-end technical functionalities for Daleel Aqar, a large-scale real estate platform enabling property buying, selling, and rentals, using Angular, NestJS, GraphQL, PostgreSQL, and AWS within an Nx.dev monorepo.",
+        "Architected the app fully compliant with WCAG guidelines to achieve the official LevelAccess certification.",
         "Established AWS-based DevOps practices including Dockerized services, Bitbucket Pipelines, monitoring, IAM roles management, and secure infrastructure."
       ]
     },
@@ -210,9 +222,8 @@
       "highlights": [
         "Designed and delivered the architecture for a platform connecting Instagram and TikTok influencers with brands, enabling seamless pitching, negotiations, and deal finalization.",
         "Implemented a React-based frontend integrated with a Directus headless CMS (Node.js) for dynamic content management and flexible editorial workflows.",
-        "Architected AWS-based microservices for authentication, content delivery, and notifications.",
-        "Established integrations between Directus CMS and AWS microservices via GraphQL/REST APIs.",
-        "Mentored the development team on engineering best practices, modular design, and cloud deployment strategies — leading the project from initial architecture through to full deployment on AWS."
+        "Architected AWS-based microservices for authentication, content delivery, and notifications, with GraphQL/REST integrations between Directus CMS and AWS services.",
+        "Mentored the development team on engineering best practices, modular design, and cloud deployment strategies — leading the project from initial architecture through full deployment on AWS."
       ]
     },
     {
@@ -221,13 +232,13 @@
       "location": "Lahore, Pakistan",
       "period": "Dec 2020 – Dec 2024",
       "periodDetail": "SE2: Dec 2020 – Oct 2022 | Sr SE: Nov 2022 – Dec 2024",
-      "tags": ["Node.js", "Next.js", "Python", "OpenAI", "LangChain", "pgvector", "Keycloak", "PostgreSQL"],
+      "tags": ["Node.js", "Next.js", "Python", "OpenAI", "LangChain", "pgvector", "Keycloak", "PostgreSQL", "Microservices"],
       "highlights": [
-        "Performance Reporting (Jun 2023 – Dec 2024): Engineered a reporting platform with AI-powered chatbot using OpenAI APIs + LangChain + pgvector for semantic search; deployed to portal.afiniti.com.",
-        "WFM Historical Connectors (Apr 2023 – Oct 2024): Architected an ETL application to export, transpose, and load historical data from Afiniti databases into client environments.",
-        "WFM SaaS (Dec 2021 – Nov 2023): Built scalable tenant-based microservices with Keycloak RBAC, timezone handling, agent scheduling, forecasting, and live/historical reporting.",
-        "Db Utility (Apr 2021 – Nov 2022): Built internal utility for smooth deployment of database schemas, stored procedures, views, and triggers on production and staging servers.",
-        "Visenya (Nov 2023 – Dec 2024): Designed and delivered an internal platform automating data pipeline creation and management for AI and data integration teams."
+        "Performance Reporting (Jun 2023 – Dec 2024): Engineered a reporting platform with an AI-powered chatbot using OpenAI APIs, a custom Python RAG pipeline, orchestrator, and PostgreSQL (pgvector) for semantic search; integrated with dashboards via REST APIs and deployed to portal.afiniti.com.",
+        "WFM Historical Connectors (Apr 2023 – Oct 2024): Architected an ETL application to export, transpose, and load historical data from Afiniti databases into client environments, running complex migrations while maintaining data integrity.",
+        "WFM SaaS (Dec 2021 – Nov 2023): Delivered scalable tenant-based microservices with Keycloak RBAC, timezone-aware agent scheduling, forecasting, time-off workflows, and live/historical reporting for global contact centers.",
+        "Db Utility (Apr 2021 – Nov 2022): Built an internal utility for smooth deployment of database schemas, stored procedures, functions, views, and triggers on production and staging servers with backup and log tracking.",
+        "Visenya (Nov 2023 – Dec 2024): Designed an internal platform automating data pipeline creation for AI and data integration teams, with an abstraction layer over a workflow orchestration engine — collaborating daily with AI researchers and data engineers."
       ]
     },
     {
@@ -238,10 +249,10 @@
       "periodDetail": "SE: Sep 2018 – Sep 2019 | Team Lead: Sep 2019 – Nov 2020",
       "tags": ["AngularJS", "Angular 2+", "Ionic", "Node.js", "NestJS", "GraphQL", "Sequelize"],
       "highlights": [
-        "Planned, executed, and delivered diverse products/projects within time and budgetary constraints using AngularJS, Angular 2+, Ionic, Node.js, NestJS, ExpressJS, Sequelize, and GraphQL.",
-        "Omni Central: Contributed to an all-in-one communication platform with SMS, WhatsApp, email, and live chat, plus CRM, inbox management, and directories.",
-        "Aduro: Developed a hybrid Ionic app for remote hardware controller management (DHW systems, hoppers, boilers); upgraded from Ionic 1 to Ionic 4.",
-        "Led sprint planning with Trello, Jira, and ClickUp; deployed iOS apps to App Store and TestFlight."
+        "Planned, executed, and delivered diverse products within time and budget using AngularJS, Angular 2+, Ionic, Node.js, NestJS, Express.js, Sequelize, and GraphQL; led sprint planning with Trello, Jira, and ClickUp.",
+        "Omni Central: Contributed to an all-in-one communication platform with SMS, WhatsApp, email, and live chat, plus CRM, inbox management, and directories — owning inbox module frontend and backend.",
+        "Aduro: Developed a hybrid Ionic app for remote hardware controller management (DHW systems, hoppers, boilers); upgraded from Ionic 1 to Ionic 4 and published to App Store and Google Play.",
+        "Built APK/IPA files post-testing and deployed iOS apps to App Store and TestFlight for public release and beta testing."
       ]
     },
     {
@@ -252,8 +263,8 @@
       "tags": ["AngularJS", "Angular 2+", "jQuery", "NetSuite"],
       "highlights": [
         "Part of the Full Stack Developer team enhancing and integrating new features on the NetSuite platform.",
-        "Led design and enhancement of front-end applications connected to NetSuite backend using AngularJS, Angular 2+, and jQuery.",
-        "Integrated NetSuite with various technologies, streamlining data flow across multiple systems."
+        "Led design and enhancement of front-end applications connected to the NetSuite backend using AngularJS, Angular 2+, and jQuery.",
+        "Integrated NetSuite with various technologies and systems, streamlining data flow and enhancing functionality across multiple business processes."
       ]
     },
     {
@@ -270,30 +281,46 @@
 
   "projects": [
     {
+      "title": "Contextual Synthesis",
+      "type": "Personal Project",
+      "url": null,
+      "links": [
+        { "label": "Demo 1", "href": "https://youtu.be/HQ0_Wg4_B4o" },
+        { "label": "Demo 2", "href": "https://youtu.be/SLPxd5kT4co" }
+      ],
+      "color": "#8b5cf6",
+      "description": "Multi-agent workflow engine that ingests long-form, unstructured stakeholder meeting transcripts and dynamically transforms them into targeted, context-aware corporate assets — including domain-specific LinkedIn posts, official press releases, and structured follow-up emails with clear action items. Showcased at QSTP.",
+      "tags": ["Multi-Agent AI", "LLM Workflows", "NLP", "Content Generation", "QSTP"],
+      "highlights": [
+        "Ingests unstructured meeting transcripts and synthesizes context-aware outputs",
+        "Generates LinkedIn posts, press releases, and follow-up emails with action items",
+        "Demonstrated at QSTP as a personal AI project"
+      ]
+    },
+    {
       "title": "Agentic Job Ingestion Tool",
       "type": "Personal Project",
       "url": null,
       "color": "#f59e0b",
-      "description": "Built a robust AI operator to solve the 'fragmented job market' problem in the Global South. Implemented intelligent data schemas to align scraped LLM outputs with structured business requirements, resolving complex schema mismatches. Developed automated scheduling for hands-off operation.",
+      "description": "Robust AI operator solving the fragmented job market problem in the Global South. Uses intelligent data schemas to align scraped LLM outputs with structured business requirements and automated scheduling for hands-off operation.",
       "tags": ["LangChain", "Python", "Tavily", "Google Sheets API", "AI Agents"],
       "highlights": [
-        "Automated job scraping and ingestion using LangChain agents",
-        "Schema alignment between LLM outputs and structured business data",
-        "Fully automated scheduling for zero-touch operation"
+        "Built a LangChain-powered AI operator for job market data ingestion in the Global South",
+        "Resolved complex schema mismatches between LLM outputs and structured business data",
+        "Automated scheduling for hands-off operation — tools that improve personal and team speed"
       ]
     },
     {
-      "title": "QC+ Memberships Platform",
+      "title": "QC+ Memberships Platform + AI Assistant",
       "type": "Enterprise",
       "url": "https://members.qacreates.com/en",
       "color": "#6366f1",
-      "description": "Centralized Memberships Platform for QC+ and Qatar Museums, migrating 100K+ members from legacy systems. Fully digitized corporate, individual, and event-based memberships with QNB payment integrations.",
-      "tags": ["Next.js", "NestJS", "Hasura GraphQL", "Azure PostgreSQL", "QNB Payments"],
+      "description": "Centralized Memberships Platform for QC+ and Qatar Museums, migrating 100K+ members via Azure Data Factory. Includes an AI-powered member assistant for conversational queries about events and membership, built with MS Foundry IQ, Python orchestration, and pgvector.",
+      "tags": ["Next.js", "NestJS", "Hasura GraphQL", "Azure PostgreSQL", "Azure Data Factory", "AI Chatbot", "pgvector"],
       "highlights": [
-        "100K+ member migration from legacy systems",
-        "RBAC-driven admin workflows and membership approvals",
-        "Integrated QNB payment gateway",
-        "Core system for Qatar Museums cultural event monetization"
+        "100K+ member migration from legacy systems using Azure Data Factory",
+        "AI chatbot for conversational events and membership queries",
+        "RBAC workflows, QNB payments, and ticketing across Qatar Museums"
       ]
     },
     {
@@ -301,13 +328,12 @@
       "type": "Enterprise",
       "url": "https://portal.afiniti.com/",
       "color": "#06b6d4",
-      "description": "Reporting platform providing senior management with real-time insights into product performance across global client environments. Features an AI-powered chatbot enabling stakeholders to query performance data conversationally and receive dynamic, contextual responses.",
-      "tags": ["AI / LLM", "Semantic Search", "REST APIs", "Enterprise SaaS"],
+      "description": "Reporting platform giving senior management clear insights into Afiniti product performance across client environments. Features an AI-powered chatbot enabling stakeholders to query performance data conversationally with dynamic, contextual responses.",
+      "tags": ["OpenAI APIs", "Python RAG", "pgvector", "REST APIs", "Enterprise SaaS"],
       "highlights": [
-        "AI-powered chatbot enabling conversational querying of performance data",
-        "Semantic search and contextual response generation over large datasets",
-        "Deployed to portal.afiniti.com serving global stakeholders",
-        "Real-time dashboard with interactive reports, graphs, and analytics"
+        "AI chatbot with custom Python RAG pipeline and pgvector semantic search",
+        "Integrated with reporting dashboard via REST APIs for real-time answers alongside analytics",
+        "Led end-to-end from architecture to deployment on portal.afiniti.com"
       ]
     },
     {
@@ -315,12 +341,12 @@
       "type": "Enterprise",
       "url": null,
       "color": "#8b5cf6",
-      "description": "Internal platform that automated data pipeline creation and management for AI and data integration teams. Built an abstraction layer on top of an industry-standard workflow orchestration engine, eliminating manual infrastructure overhead and enabling teams to focus on their actual work.",
-      "tags": ["Data Engineering", "Pipeline Automation", "AI Tooling", "Internal Platform"],
+      "description": "Internal platform automating data pipeline creation and management for AI and data integration teams. Built an abstraction layer over an industry-standard workflow orchestration engine, developed in close collaboration with AI researchers and data engineers.",
+      "tags": ["Data Engineering", "Pipeline Automation", "AI Tooling", "Workflow Orchestration"],
       "highlights": [
-        "Abstraction layer over a workflow orchestration engine — no deep infra knowledge required",
-        "Daily collaboration with AI researchers and data engineers to translate needs into features",
-        "Compressed pipeline setup time significantly — became core productivity tool for data and AI teams"
+        "Abstraction layer over workflow orchestration — no deep infra knowledge required",
+        "Daily collaboration with AI researchers and data engineers",
+        "Became a core productivity tool compressing pipeline setup time for data and AI teams"
       ]
     },
     {
@@ -328,13 +354,12 @@
       "type": "Enterprise",
       "url": "https://www.daleelaqar.com/#/nav/home",
       "color": "#10b981",
-      "description": "Large-scale real estate platform enabling property buying, selling, and rentals. Delivered end-to-end technical functionalities across planning, architecture, and deployment. WCAG-compliant and certified by LevelAccess.",
+      "description": "Large-scale real estate platform enabling property buying, selling, and rentals. Delivered end-to-end across planning, architecture, and deployment. WCAG-compliant and certified by LevelAccess.",
       "tags": ["Angular", "NestJS", "GraphQL", "PostgreSQL", "AWS", "Nx.dev", "WCAG"],
       "highlights": [
         "WCAG certified by LevelAccess",
-        "Nx.dev monorepo architecture for scalability and rapid onboarding",
-        "AWS DevOps: Docker, Bitbucket Pipelines, IAM, monitoring",
-        "Full property lifecycle: listings, search, and transactions"
+        "Nx.dev monorepo for scalability and rapid team onboarding",
+        "AWS DevOps: Docker, Bitbucket Pipelines, IAM, monitoring"
       ]
     },
     {
@@ -342,13 +367,12 @@
       "type": "Enterprise",
       "url": null,
       "color": "#ef4444",
-      "description": "Scalable, tenant-based SaaS for contact center workforce management. Supports agent scheduling, time-off requests, forecasting, and real-time reporting with role-based access control and multi-timezone support.",
-      "tags": ["Multi-tenant SaaS", "RBAC", "Workforce Management", "Enterprise"],
+      "description": "Scalable, tenant-based SaaS for contact center workforce management with Keycloak RBAC, timezone-aware scheduling, forecasting, time-off workflows, and live/historical reporting.",
+      "tags": ["Multi-tenant SaaS", "Keycloak RBAC", "Workforce Management", "Enterprise"],
       "highlights": [
-        "Multi-tenant SaaS architecture with role-based access control",
-        "Timezone-aware agent scheduling for global contact centers",
-        "Statistical forecasting for agent workforce planning",
-        "Live and historical reports for strategic insights"
+        "Tenant-based microservices tailored to each client's operational structure",
+        "Timezone-aware agent scheduling and statistical forecasting",
+        "Time-off request workflows and live/historical reports for strategic insights"
       ]
     },
     {
@@ -356,12 +380,12 @@
       "type": "Product",
       "url": null,
       "color": "#f59e0b",
-      "description": "All-in-one platform for multi-channel customer communication including SMS, WhatsApp, email, and live chat. Incorporates CRM, inbox management, directories, and spreadsheet features.",
+      "description": "All-in-one platform for multi-channel customer communication including SMS, WhatsApp, email, and live chat, with CRM, inbox management, directories, and spreadsheet features.",
       "tags": ["Angular 2+", "Node.js", "NestJS", "GraphQL"],
       "highlights": [
         "Multi-channel: SMS, WhatsApp, Email, Live Chat",
-        "CRM and inbox management modules",
-        "Frontend and backend inbox module ownership"
+        "CRM, inbox management, and directories",
+        "Owned inbox module frontend and backend end-to-end"
       ]
     },
     {
@@ -369,7 +393,7 @@
       "type": "Mobile App",
       "url": "https://play.google.com/store/apps/details?id=com.nbe.android.adurohybrid1&hl=en",
       "color": "#06b6d4",
-      "description": "Hybrid mobile app using Ionic to interface with hardware controllers, enabling remote management of DHW systems, hoppers, and boilers. Upgraded from Ionic 1 to Ionic 4 for improved performance and user experience.",
+      "description": "Hybrid Ionic app interfacing with hardware controllers for remote management of DHW systems, hoppers, and boilers. Upgraded from Ionic 1 to Ionic 4 for improved performance and user experience.",
       "tags": ["Ionic", "Capacitor", "TypeScript", "IoT", "Mobile"],
       "highlights": [
         "Remote management of DHW systems, hoppers, and boilers",
@@ -380,27 +404,6 @@
   ],
 
   "certifications": [
-    {
-      "title": "AWS Solutions Architect",
-      "issuer": "Amazon Web Services (Credly)",
-      "category": "Cloud",
-      "color": "#f59e0b",
-      "link": "https://www.credly.com/users/awais-nasir.104ea20a/"
-    },
-    {
-      "title": "AWS Cloud Practitioner Essentials",
-      "issuer": "AWS SkillBuilder",
-      "category": "Cloud",
-      "color": "#f59e0b",
-      "link": null
-    },
-    {
-      "title": "AWS Cloud Quest: Practitioner",
-      "issuer": "AWS SkillBuilder",
-      "category": "Cloud",
-      "color": "#f59e0b",
-      "link": null
-    },
     {
       "title": "NestJS Developer",
       "issuer": "Udemy",
@@ -430,11 +433,57 @@
       "link": null
     },
     {
+      "title": "AWS Cloud Practitioner Essentials",
+      "issuer": "AWS SkillBuilder",
+      "category": "Cloud",
+      "color": "#f59e0b",
+      "link": null
+    },
+    {
+      "title": "AWS Cloud Quest: Practitioner",
+      "issuer": "AWS SkillBuilder",
+      "category": "Cloud",
+      "color": "#f59e0b",
+      "link": null
+    },
+    {
+      "title": "AWS Solutions Architect SAA-C03",
+      "issuer": "Amazon Web Services (Credly)",
+      "category": "Cloud",
+      "color": "#f59e0b",
+      "link": "https://www.credly.com/users/awais-nasir.104ea20a/"
+    },
+    {
       "title": "WCAG Principles & Compliance",
       "issuer": "Udemy",
       "category": "Accessibility",
       "color": "#8b5cf6",
       "link": null
+    },
+    {
+      "title": "Microsoft Azure Fundamentals AZ-900",
+      "issuer": "Microsoft Learn",
+      "category": "Cloud",
+      "color": "#0ea5e9",
+      "link": "https://learn.microsoft.com/en-gb/users/muhammadawais-4245/",
+      "linkLabel": "View on Microsoft Learn"
+    },
+    {
+      "title": "Microsoft AI Fundamentals AI-900",
+      "issuer": "Microsoft Learn",
+      "category": "AI",
+      "color": "#6366f1",
+      "link": "https://learn.microsoft.com/en-gb/users/muhammadawais-4245/",
+      "linkLabel": "View on Microsoft Learn"
+    },
+    {
+      "title": "Azure AI Apps & Agents Dev Associate (AI-103)",
+      "issuer": "Microsoft Learn",
+      "category": "AI",
+      "color": "#6366f1",
+      "link": "https://learn.microsoft.com/en-gb/users/muhammadawais-4245/",
+      "linkLabel": "View on Microsoft Learn",
+      "status": "In Progress"
     }
   ],
 
@@ -444,12 +493,12 @@
     "subtitle": "Have a project in mind or want to collaborate? I'd love to hear from you.",
     "pitch": "I'm currently open to new opportunities in the Gulf region and globally. Whether it's a full-time role, consulting engagement, or technical advisory — reach out and let's explore what we can build together.",
     "socials": [
-      { "label": "GitHub",        "href": "https://github.com/awaism551",                                  "icon": "GitFork",    "color": "#6366f1" },
-      { "label": "LinkedIn",      "href": "https://www.linkedin.com/in/awais-nasir-dev/",                  "icon": "Link",       "color": "#06b6d4" },
-      { "label": "StackOverflow", "href": "https://stackoverflow.com/users/5568646/muhammad-awais",        "icon": "ExternalLink","color": "#f59e0b" },
-      { "label": "HackerRank",    "href": "https://www.hackerrank.com/profile/awaism551",                  "icon": "ExternalLink","color": "#10b981" },
-      { "label": "Credly",        "href": "https://www.credly.com/users/awais-nasir.104ea20a/",            "icon": "ExternalLink","color": "#8b5cf6" },
-      { "label": "YouTube",       "href": "https://www.youtube.com/channel/UChkO7lbMmglC9o4Or_n5Dmg",     "icon": "PlayCircle", "color": "#ef4444" }
+      { "label": "GitHub",        "href": "https://github.com/awaism551",                           "icon": "GitFork",     "color": "#6366f1" },
+      { "label": "LinkedIn",      "href": "https://www.linkedin.com/in/awais-nasir-dev/",           "icon": "Link",        "color": "#06b6d4" },
+      { "label": "StackOverflow", "href": "https://stackoverflow.com/users/5568646/muhammad-awais", "icon": "ExternalLink","color": "#f59e0b" },
+      { "label": "HackerRank",    "href": "https://www.hackerrank.com/profile/awaism551",           "icon": "ExternalLink","color": "#10b981" },
+      { "label": "Credly",        "href": "https://www.credly.com/users/awais-nasir.104ea20a/",     "icon": "ExternalLink","color": "#8b5cf6" },
+      { "label": "YouTube",       "href": "https://www.youtube.com/channel/UChkO7lbMmglC9o4Or_n5Dmg","icon": "PlayCircle",  "color": "#ef4444" }
     ]
   },
 

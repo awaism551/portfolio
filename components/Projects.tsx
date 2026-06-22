@@ -45,7 +45,7 @@ export default function Projects() {
                   </div>
                   <h3 className="text-base font-bold" style={{ color: "var(--foreground)" }}>{project.title}</h3>
                 </div>
-                <div className="flex items-center gap-2 shrink-0">
+                <div className="flex flex-wrap items-center justify-end gap-2 shrink-0">
                   {project.url && (
                     <a
                       href={project.url}
@@ -58,6 +58,21 @@ export default function Projects() {
                       Visit
                     </a>
                   )}
+                  {"links" in project &&
+                    Array.isArray(project.links) &&
+                    project.links.map((link: { label: string; href: string }) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition-all duration-200 hover:scale-105"
+                        style={{ background: `${project.color}12`, borderColor: `${project.color}30`, color: project.color }}
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        {link.label}
+                      </a>
+                    ))}
                   <div className="p-2 rounded-lg" style={{ background: `${project.color}15` }}>
                     <Rocket className="w-4 h-4" style={{ color: project.color }} />
                   </div>
