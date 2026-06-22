@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { buildPortfolioContext } from "@/lib/portfolio-context";
 import { parseChatPayload } from "@/lib/format-chat-response";
+import { getClaudeApiKey, getClaudeModel } from "@/lib/claude-env";
 
 export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
 
 type ChatMessage = {
   role: "user" | "assistant";
@@ -38,13 +38,13 @@ Format exactly:
 The suggestions must be natural next questions a recruiter or hiring manager might ask, based on what you just answered. Each suggestion must be under 60 characters.`;
 
 function getApiKey(): string | undefined {
-  // Bracket access avoids build-time inlining on some serverless hosts (e.g. Amplify)
-  return process.env["ANTHROPIC_API_KEY"] ?? process.env["CLAUDE_API_KEY"];
+  return getClaudeApiKey();
 }
 
 export async function POST(req: NextRequest) {
   const apiKey = getApiKey();
   if (!apiKey) {
+    console.error("Chatbot: no API key in process.env at request time");
     return NextResponse.json(
       { error: "ANTHROPIC_API_KEY (or CLAUDE_API_KEY) is not configured" },
       { status: 500 }
@@ -83,7 +83,7 @@ export async function POST(req: NextRequest) {
         "anthropic-version": "2023-06-01",
       },
       body: JSON.stringify({
-        model: process.env.CLAUDE_MODEL ?? "claude-sonnet-4-6",
+        model: getClaudeModel(),
         max_tokens: 1024,
         system: `${SYSTEM_PROMPT}\n\n--- PORTFOLIO CONTEXT ---\n${context}`,
         messages,

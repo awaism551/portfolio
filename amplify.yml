@@ -9,21 +9,26 @@ frontend:
     build:
       commands:
         - export NODE_OPTIONS="--max_old_space_size=4096"
-        # Browser-exposed vars (optional)
+        # Reset env files so redeploys do not duplicate entries
+        - rm -f .env.production .env
+        # Per AWS SSR docs: write server secrets into files Next.js loads before build
+        # https://docs.aws.amazon.com/amplify/latest/userguide/ssr-environment-variables.html
+        - env | grep -e '^ANTHROPIC_API_KEY=' >> .env.production || true
+        - env | grep -e '^CLAUDE_API_KEY=' >> .env.production || true
+        - env | grep -e '^CLAUDE_MODEL=' >> .env.production || true
         - env | grep -E '^NEXT_PUBLIC_' >> .env.production || true
         - env | grep -E '^REACT_APP_' >> .env.production || true
-        # Server-side API secrets — must be written before `next build`
-        - echo "ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY" >> .env.production
-        - echo "CLAUDE_API_KEY=$CLAUDE_API_KEY" >> .env.production
-        - echo "CLAUDE_MODEL=$CLAUDE_MODEL" >> .env.production
-        # Safe build-time check (never prints the secret value)
+        - cp .env.production .env 2>/dev/null || true
         - |
           if [ -n "$ANTHROPIC_API_KEY" ] || [ -n "$CLAUDE_API_KEY" ]; then
             echo "Claude API key is present at build time"
           else
-            echo "WARNING: ANTHROPIC_API_KEY and CLAUDE_API_KEY are both empty — chatbot will fail in production"
+            echo "WARNING: ANTHROPIC_API_KEY and CLAUDE_API_KEY are both empty"
+            exit 1
           fi
         - npm run build
+        # Ship .env.production with the SSR bundle for Amplify compute runtime
+        - cp .env.production .next/.env.production
   artifacts:
     baseDirectory: .next
     files:
